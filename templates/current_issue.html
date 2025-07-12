@@ -1,0 +1,575 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Current
+Issue{%endblock %} {% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Chap qism: rasm va statik matn -->
+  <div class="col-span-12 md:col-span-8">
+    <div
+      class="flex flex-col md:flex-row md:space-x-6 md:space-y-0 items-start"
+    >
+      <img
+        src="{% static 'assets/cover.jpg' %}"
+        alt="Journal Cover"
+        class="w-48 flex-shrink-0 shadow-md mx-auto md:mx-0"
+      />
+      <div class="mt-6 md:mt-0 text-left text-gray-900 w-full">
+        <h1 class="text-[26px] font-bold mb-2">Current Issue</h1>
+        <div class="text-[21px] font-normal mb-4">
+          Volume 22&nbsp;|&nbsp;Issue 2&nbsp;|&nbsp;June 2025
+        </div>
+        <div class="space-y-1 text-[14px]">
+          <div><span class="font-semibold">ISSN:</span> 1744-1854</div>
+          <div><span class="font-semibold">eISSN:</span> 1750-0109</div>
+          <div>3 issues per year: February, June & October</div>
+          <div>
+            Published on behalf of the
+            <a href="#" class="text-sky-800 hover:underline font-semibold">
+              British Comparative Literature Association
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Article list: faqat chap sectionda -->
+    <div class="mt-10 space-y-10">
+      <!-- 1-article -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <!-- Lock SVG -->
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">Front matter</div>
+        <div class="text-[15px] text-gray-800 mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0556"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0556</a
+          >
+        </div>
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 2-article -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">Notes on Contributors</div>
+        <div class="text-[15px] text-gray-800 mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0557"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0557</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-700">pp v–vii</span>
+        </div>
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 3-article: Free access -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <!-- Lock SVG -->
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">Editors’ Introduction</div>
+        <div class="text-[15px] text-gray-700 mb-1">
+          Jacob Blakesley, Adhira Mangalagiri, Rosa Mucignat, and Elisa Segnini
+        </div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0558"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0558</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 143–144</span>
+        </div>
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- Section heading -->
+      <div class="mt-12 mb-4">
+        <div class="text-[18px] font-bold">
+          Essays: Spectres, Spectrums and Spectrality
+        </div>
+      </div>
+      <!-- 4-article: No access -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <!-- Red Lock SVG -->
+          <svg
+            class="w-4 h-4 text-red-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-red-600 font-medium">No access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">
+          Introduction: Spectres, Spectrums and Spectrality: New Directions in
+          Comparative Literature
+        </div>
+        <div class="text-[15px] text-gray-400 mb-1">
+          Laura Kennedy, Rachel Milne, Charlotte Spear, and Daisy Towers
+        </div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0559"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0559</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 147–155</span>
+        </div>
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 5-article: No access, preview abstract -->
+      <div class="relative">
+        <div class="flex items-center text-[14px] mb-1">
+          <!-- Red Lock SVG -->
+          <svg
+            class="w-4 h-4 text-red-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-red-600 font-medium">No access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[16px] mb-1">
+          ‘Stop talking like an old lady’, Or The Spectral Ecologies of Ageing
+          and Illness in <em>Un beau matin</em> (2022)
+        </div>
+        <div class="text-[16px] text-gray-400 mb-1">Rin Macritchie</div>
+        <div class="text-[16px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0560"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0560</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 157–174</span>
+        </div>
+        {% include "components/accordion.html" with content="This article explores representations of the spectral ecologies of ageing and illness in an urban environment. It examines Mia Hansen-Løve’s 2022 film <em>Un beau matin</em> (One Fine Morning) in an ecocritical context to show the many ways that experiences of ageing and illness are made incompatible with the realities of contemporary urban living. Comparison of death’s essential, ecological fecundity with its spectral presence in the film underscores connections between the cultural displacement of death and a false sense of ecological isolation which informs the attitudes and inaction that enable climate crises. By exploring this connection, this ..." %}
+        <div
+          class="flex justify-end text-[16px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 6-article: No access, preview abstract -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <svg
+            class="w-4 h-4 text-red-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-red-600 font-medium">No access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">
+          Sister Outsiders of the Lesbian Bar: Spatial Hauntings in Audre
+          Lorde's <em>Zami: A New Spelling of My Name</em>
+        </div>
+        <div class="text-[15px] text-gray-400 mb-1">Emma Wood</div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0561"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0561</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 175–192</span>
+        </div>
+        {% include "components/accordion.html" with content="In weaving queer temporality and Black feminist theory together, this article examines the role of the lesbian bar in Audre Lorde's 1982 biomythography Zami: A New Spelling of My Name. This article examines the various ways Audre Lorde as both main character and author experiences and negotiates the spaces and dynamics of the 1950s working-class lesbian bar in Greenwich Village, New York City. I analyse how Lorde conceives of the lesbian bar as the only place available for lesbians in 1950s New York City, but also how Lorde experiences feeling out of place and unbelonging in this supposed ‘only’ place for lesbians at the time. I examine both ..." %}
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 7-article: No access, preview abstract -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <svg
+            class="w-4 h-4 text-red-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-red-600 font-medium">No access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">
+          ‘A becoming of winged creatures’: Unruly Bodies and Hidden Transcripts
+          in Zeyn Joukhadar’s <em>The Thirty Names of Night</em>
+        </div>
+        <div class="text-[15px] text-gray-400 mb-1">Evie Lewis</div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0562"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0562</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 193–211</span>
+        </div>
+        {% include "components/accordion.html" with content="This article uses Jack Halberstam’s notions of ‘hidden transcripts’ and ‘failure’ as a starting point for analysing Zeyn Joukhadar’s novel The Thirty Names of Night (2020). The ‘hidden transcripts’ – diaries, sketchbooks and journals that are unearthed throughout the novel – form a spectral archive that queers the history of migration to New York City, and functions as an enduring alternative to the conscription of queer migrant lives at the hands of the contemporary nation-state. Through the racialized and queer bodies in his novel, Joukhadar articulates the experience of trying to account for oneself when one is not readily accommodated in ..." %}
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- Section heading: Translation -->
+      <div class="mt-12 mb-4">
+        <div class="text-[22px] font-bold">Translation</div>
+      </div>
+      <!-- 8-article: No access, preview abstract, italic title -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <svg
+            class="w-4 h-4 text-red-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-red-600 font-medium">No access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">
+          <em>The Victims of Defeat</em> by Louise Michel and Marguerite Tinayre
+        </div>
+        <div class="text-[15px] text-gray-400 mb-1">Maria Teresa Marino</div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0563"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0563</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 213–228</span>
+        </div>
+        {% include "components/accordion.html" with content="Educator, revolutionary and feminist Louise Michel (1830–1905) played an important role in the Paris Commune. Michel wrote the novel La Misère (1882) in collaboration with teacher and anticlerical militant Marguerite Tinayre (1831–1895), the opening chapter of which is translated here. Michel and Tinayre introduce a poor Parisian family in a modest neighbourhood. The chapter focuses on the bond between a mother and a daughter against the backdrop of poverty, social violence and gender-based oppression. The sorrow these women experience is the personal expression of the political and social question that was Michel’s primary focus throughout ..." %}
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- Section heading: Interview -->
+      <div class="mt-12 mb-4">
+        <div class="text-[22px] font-bold">Interview</div>
+      </div>
+      <!-- 9-article: Free access, preview abstract -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">
+          ‘I am an old Buddhist soul’: An Interview with Gagan Gill
+        </div>
+        <div class="text-[15px] text-gray-400 mb-1">Archit Nanda</div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0564"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0564</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 229–248</span>
+        </div>
+        {% include "components/accordion.html" with content="Gagan Gill (b. 1959) is a prominent Hindi poet whose poems grapple with the meaning of loss and individual suffering. She has published five volumes of poetry, three collections of prose writings and a travelogue. This interview with Gill was conducted on 25 November 2024, a few days before she was awarded the Sahitya Akademi Award, India's highest literary honour. The interview introduces Gill's life and literary work through her memories of her childhood, her relationships with multiple languages, the thematic concerns of her poetry, the materialities of her creative process, her conversion to Buddhism and her immersion in spirituality." %}
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- Section heading: Reviews -->
+      <div class="mt-12 mb-4">
+        <div class="text-[22px] font-bold">Reviews</div>
+      </div>
+      <!-- 10-article: Free access, italic book title -->
+      <div class="relative">
+        <div class="flex items-center text-[15px] mb-1">
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[17px] mb-1">
+          Peter Zusi,
+          <em
+            >The Integrity of the Avant-Garde: Karel Teige and the Biography of
+            an Ambition</em
+          >
+        </div>
+        <div class="text-[15px] text-gray-400 mb-1">Václav Lucien Paris</div>
+        <div class="text-[15px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0565"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0565</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 249–252</span>
+        </div>
+        <div
+          class="flex justify-end text-[15px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 11-article: Free access, italic book title -->
+      <div class="relative">
+        <div class="flex items-center text-[14px] mb-1">
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[16px] mb-1">
+          Katja Haustein,
+          <em
+            >Alone with Others: An Essay on Tact in Five Modernist
+            Encounters</em
+          >
+        </div>
+        <div class="text-[16px] text-gray-400 mb-1">Isavella Vouza</div>
+        <div class="text-[16px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0566"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0566</a
+          >
+          <span class="mx-2 text-gray-400">•</span>
+          <span class="text-gray-900">pp 252–255</span>
+        </div>
+        <div
+          class="flex justify-end text-[16px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">Full text</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">EPUB</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- 12-article: Free access, Back matter -->
+      <div class="relative">
+        <div class="flex items-center text-[14px] mb-1">
+          <svg
+            class="w-4 h-4 text-green-600 mr-1.5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8V6a5 5 0 0110 0v2h1a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h1zm2-2a3 3 0 116 0v2H7V6z"
+            />
+          </svg>
+          <span class="text-green-700 font-medium">Free access</span>
+          <span class="mx-2 text-gray-400">|</span>
+          <span class="text-gray-500">June 2025</span>
+        </div>
+        <div class="font-semibold text-[16px] mb-1">Back matter</div>
+        <div class="text-[16px] text-gray-900 font-semibold mb-2">
+          <a
+            href="https://doi.org/10.3366/ccs.2025.0567"
+            class="hover:underline"
+            >https://doi.org/10.3366/ccs.2025.0567</a
+          >
+        </div>
+        <div
+          class="flex justify-end text-[16px] text-[#00325f] font-medium space-x-2"
+        >
+          <a href="#" class="hover:underline">Citation</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="hover:underline">PDF</a>
+        </div>
+        <hr class="mt-6 border-gray-200" />
+      </div>
+      <!-- Previous issue link -->
+      <div class="mt-8">
+        <a
+          href="#"
+          class="text-[#00325f] text-[16px] font-medium hover:underline"
+          >Previous issue</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- O'ng qism: cardlar -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include "components/sidebar_alerts.html" %} 
+    {% include "components/sidebar_mailing_list.html" %}
+  </aside>
+</div>
+{% endblock %} {% block nav_current_issue_active %}active{% endblock %}

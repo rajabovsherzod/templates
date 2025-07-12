@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
@@ -117,17 +121,25 @@
           class="hidden lg:flex justify-center items-center text-white text-sm font-bold"
         >
           <li>
-            <a href="#" class="nav-link active px-4 py-6"
+            <a
+              href="{% url 'index' %}"
+              class="nav-link px-4 py-6 {% block nav_journal_home_active %}{% endblock %}"
               ><span>Journal Home</span></a
             >
           </li>
           <li>
-            <a href="#" class="nav-link px-4 py-6"
+            <a
+              href="{% url 'current_issue' %}"
+              class="nav-link px-4 py-6 {% block nav_current_issue_active %}{% endblock %}"
               ><span>Current Issue</span></a
             >
           </li>
           <li>
-            <a href="#" class="nav-link px-4 py-6"><span>All Issues</span></a>
+            <a
+              href="{% url 'all_issues' %}"
+              class="nav-link px-4 py-6 {% block nav_all_issues_active %}{% endblock %}"
+              ><span>All Issues</span></a
+            >
           </li>
           <li class="relative group">
             <a href="#" class="nav-link px-4 py-6">
