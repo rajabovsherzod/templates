@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+*.sqlite3
+*.log
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyCharm
+.idea/
+
+# Static/media uploads (if any)
+media/
+staticfiles/
+
+# Local settings
+local_settings.py
+
+# Node/Tailwind (if used)
+node_modules/
+
+# Others
+*.bak 

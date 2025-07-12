@@ -1,0 +1,715 @@
+{% extends 'base.html' %}{% load static %}{% block title %}Comparative Critical
+Studies{% endblock %}{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Left Column -->
+  <div class="col-span-12 md:col-span-8">
+    <div
+      class="flex flex-col md:flex-row md:space-x-6 md:space-y-0 items-start"
+    >
+      <!-- Journal Cover -->
+      <img
+        src="{% static 'assets/cover.jpg' %}"
+        alt="Journal Cover"
+        class="w-48 flex-shrink-0 shadow-md mx-auto md:mx-0"
+      />
+
+      <!-- Journal Description -->
+      <div class="mt-6 md:mt-0 text-left text-gray-900">
+        <p class="text-sm leading-relaxed">
+          <span class="font-bold italic">Comparative Critical Studies</span> is
+          the journal for comparative literature as a discipline. Articles focus
+          on innovative perspectives on the theory and practice of the study of
+          comparative literature in all its aspects, including but not limited
+          to: theory and history of comparative literary studies; comparative
+          studies of conventions, genres, themes and periods; reception studies;
+          comparative gender studies; transmediality; diasporas and the
+          migration of culture from a literary perspective; and the theory and
+          practice of literary translation and cultural transfer.
+        </p>
+        <div class="mt-4 text-sm space-y-1">
+          <p><span class="font-semibold">ISSN:</span> 1744-1854</p>
+          <p><span class="font-semibold">eISSN:</span> 1750-0109</p>
+          <p>3 issues per year: February, June & October</p>
+          <p>
+            Published on behalf of the
+            <a href="#" class="text-sky-800 hover:underline font-semibold"
+              >British Comparative Literature Association</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="mt-12">
+      <div class="mb-4 border-b border-gray-200">
+        <ul class="flex flex-wrap -mb-px text-center" id="myTab" role="tablist">
+          <li class="me-2" role="presentation">
+            <button
+              class="inline-block p-4 border-b-[3px] rounded-t-lg"
+              id="latest-tab"
+              data-tabs-target="#latest"
+              type="button"
+              role="tab"
+              aria-controls="latest"
+              aria-selected="true"
+            >
+              Latest
+            </button>
+          </li>
+          <li class="me-2" role="presentation">
+            <button
+              class="inline-block p-4 border-b-[3px] rounded-t-lg"
+              id="most-read-tab"
+              data-tabs-target="#most-read"
+              type="button"
+              role="tab"
+              aria-controls="most-read"
+              aria-selected="false"
+            >
+              Most read
+            </button>
+          </li>
+          <li class="me-2" role="presentation">
+            <button
+              class="inline-block p-4 border-b-[3px] rounded-t-lg"
+              id="most-cited-tab"
+              data-tabs-target="#most-cited"
+              type="button"
+              role="tab"
+              aria-controls="most-cited"
+              aria-selected="false"
+            >
+              Most cited
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="myTabContent">
+        <!-- Latest Content -->
+        <div
+          class="hidden py-4"
+          id="latest"
+          role="tabpanel"
+          aria-labelledby="latest-tab"
+        >
+          <div class="space-y-8">
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline">Front matter</a>
+              </h3>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline">Notes on Contributors</a>
+              </h3>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline">Editors’ Introduction</a>
+              </h3>
+              <p class="text-base text-gray-500 mt-2">
+                Jacob Blakesley, Adhira Mangalagiri, Rosa Mucignat, and Elisa
+                Segnini
+              </p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Introduction: Spectres, Spectrums and Spectrality: New
+                  Directions in Comparative Literature</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">
+                Laura Kennedy, Rachel Milne, Charlotte Spear, and Daisy Towers
+              </p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >‘Stop talking like an old lady’, Or The Spectral Ecologies of
+                  Ageing and Illness in Un beau matin (2022)</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Rin Macritchie</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Sister Outsiders of the Lesbian Bar: Spatial Hauntings in
+                  Audre Lorde's Zami: A New Spelling of My Name</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Emma Wood</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >‘A becoming of winged creatures’: Unruly Bodies and Hidden
+                  Transcripts in Zeyn Joukhadar’s The Thirty Names of Night</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Evie Lewis</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >The Victims of Defeat by Louise Michel and Marguerite
+                  Tinayre</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Maria Teresa Marino</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >‘I am an old Buddhist soul’: An Interview with Gagan Gill</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Archit Nanda</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 22 | Issue 2 | June 2025
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Peter Zusi, The Integrity of the Avant-Garde: Karel Teige and
+                  the Biography of an Ambition</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Václav Lucien Paris</p>
+            </div>
+          </div>
+        </div>
+        <!-- Most Read Content -->
+        <div
+          class="hidden py-4"
+          id="most-read"
+          role="tabpanel"
+          aria-labelledby="most-read-tab"
+        >
+          <div class="space-y-8">
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 9 | Issue 3 | October 2012
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >The Humanism in Posthumanism</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Kate Soper</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 9 | Issue 3 | October 2012
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Why Are We So Fond of Monsters?</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Dominique Lestel</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 5 | Issue 2-3 | October 2008
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Monstrous Conceptions: Sex, Madness and Gender in Medieval
+                  Medical Texts</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">LAURA JOSE</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 9 | Issue 3 | October 2012
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Hybridity, Monstrosity and the Posthuman in Philosophy and
+                  Literature Today</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Lucile Desblache</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 17 | Issue 1 | February 2020
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >The Bar under the Sea (Il bar sotto il mare) by Stefano
+                  Benni, translated by Jessica Wood</a
+                >
+              </h3>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 9 | Issue 3 | October 2012
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Posthuman Encounters: Technology, Embodiment and Gender in
+                  Recent Feminist Thought and in the Work of Marie
+                  Darrieussecq</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Amaleena Damlé</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 20 | Issue 1 | February 2023
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Autosociobiography: A Travelling Form</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">
+                Marcus Twellmann and Philipp Lammers
+              </p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 18 | Issue 1 | February 2021
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Battle of the Mice and Frogs (Batrachomyomachia) by
+                  Anonymous, translated from the Ancient Greek by Fintan
+                  O'Higgins</a
+                >
+              </h3>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 18 | Issue supplement | October 2021
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Writing the Life of Natalie Clifford Barney's Salon: ‘le
+                  cercle d'enchantement et d'inspiration’</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Emily Eells</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 6 | Issue 2 | June 2009
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Manfred Beller and Joep Leerssen (eds.), Imagology: The
+                  Cultural Construction and Literary Representation of National
+                  Characters – A Critical Survey. Series: Studia Imagologica,
+                  vol. 13; series editors: Hugo Dyserinck and Joep Leerssen
+                  (Amsterdam and New York: Rodopi, 2007). ISBN
+                  978-90-420-2318-5, €45.</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Robert Weninger</p>
+            </div>
+          </div>
+        </div>
+        <!-- Most Cited Content -->
+        <div
+          class="hidden py-4"
+          id="most-cited"
+          role="tabpanel"
+          aria-labelledby="most-cited-tab"
+        >
+          <div class="space-y-8">
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 11 | Issue 2-3 | October 2014
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Writing as a Nomadic Subject</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Rosi Braidotti</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 20 | Issue 1 | February 2023
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Autosociobiography: A Travelling Form</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">
+                Marcus Twellmann and Philipp Lammers
+              </p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 9 | Issue 3 | October 2012
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >The Humanism in Posthumanism</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Kate Soper</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 18 | Issue 1 | February 2021
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Cross-Cultural Encounters: A Feminist Perspective on the
+                  Contemporary Reception of Jane Austen in China</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Shuo Sun</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 2 | Issue 3 | October 2005
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >The Beast in Literature: Some Initial Thoughts</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Kate Soper</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 8 | Issue 2-3 | October 2011
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Michel Foucault, Pierre Rivière and the Archival Imaginary</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Michael Sheringham</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 8 | Issue 2-3 | October 2011
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Whose Museum? Whose History? Whose Memories? Remembering in
+                  the Work of Dubravka Ugrešić</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Stijn Vervaet</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 8 | Issue 2-3 | October 2011
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline">After the Archive</a>
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Carolyn Steedman</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 11 | Issue 2-3 | October 2014
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >From Roots to Routes … to Borders: Trans-Coastal Narratives
+                  across the Mediterranean</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Mariangela Palladino</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">
+                Volume 12 | Issue 2 | June 2015
+              </p>
+              <h3 class="text-base font-[500] text-gray-800 mt-1">
+                <a href="#" class="hover:underline"
+                  >Max Müller and the Comparative Method</a
+                >
+              </h3>
+              <p class="text-base text-gray-500 mt-2">Angus Nicholls</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column (Sidebar) -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    <!-- Sign up / RSS -->
+    <div class="bg-white p-4 md:p-6 shadow-lg rounded-sm">
+      <ul class="space-y-4">
+        <li class="flex items-center">
+          <!-- Bell SVG -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-3 text-gray-800"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2"
+            />
+          </svg>
+          <a
+            href="#"
+            class="text-sm font-medium text-gray-800 hover:text-[#00325f]"
+          >
+            Sign up for content alerts
+          </a>
+        </li>
+        <li class="flex items-center">
+          <!-- RSS SVG -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 mr-3 text-gray-800"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415a3.3 3.3 0 0 1 3.293 3.295A3.303 3.303 0 0 1 3.283 24C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"
+            />
+          </svg>
+          <a
+            href="#"
+            class="text-sm font-medium text-gray-800 hover:text-[#00325f]"
+          >
+            RSS Feed
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Published on behalf of -->
+    <div class="bg-white p-4 md:p-6 shadow-lg rounded-sm">
+      <h3 class="text-base font-medium text-[#00325f] mb-4">
+        Published on behalf of
+      </h3>
+      <img
+        src="{% static 'assets/bcla-logo.jpg' %}"
+        alt="BCLA Logo"
+        class="my-4"
+      />
+      <hr class="mt-4" />
+    </div>
+
+    <!-- Explore free content -->
+    <div class="bg-white p-4 md:p-5 shadow-lg rounded-sm">
+      <h3 class="text-lg font-medium text-[#00325f] mb-4">
+        Explore free content
+      </h3>
+      <div class="space-y-4">
+        <div class="pb-4 border-b">
+          <h4 class="font-semibold text-gray-800">Sample issue</h4>
+          <p class="text-sm text-gray-600 mt-1">
+            Comparative Critical Studies Volume 20, Issue 1
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-800">Featured article</h4>
+          <p class="text-xs text-gray-500 mt-1">
+            Volume 22 | Issue 2 | June 2025
+          </p>
+          <p class="text-sm text-gray-600 mt-1">
+            ‘I am an old Buddhist soul’: An Interview with Gagan Gill
+          </p>
+          <p class="text-sm text-gray-500 mt-1">Archit Nanda</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mailing List -->
+    <div class="bg-white p-4 md:p-5 shadow-lg rounded-sm">
+      <h3 class="text-lg font-medium text-[#00325f] mb-2">
+        Join our Literary Studies mailing list
+      </h3>
+      <p class="text-sm text-gray-600 mb-4">
+        For all the latest on our books and journals, events in your field, free
+        articles and 30% off all EUP books.
+      </p>
+      <form action="#" class="space-y-4">
+        <div>
+          <label
+            for="email"
+            class="block mb-1 text-sm font-medium text-gray-900"
+            >Email address*</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="name@example.ac.uk"
+          />
+        </div>
+        <div>
+          <label
+            for="first-name"
+            class="block mb-1 text-sm font-medium text-gray-900"
+            >First name*</label
+          >
+          <input
+            type="text"
+            id="first-name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div>
+          <label
+            for="last-name"
+            class="block mb-1 text-sm font-medium text-gray-900"
+            >Last name*</label
+          >
+          <input
+            type="text"
+            id="last-name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div>
+          <label
+            for="institution"
+            class="block mb-1 text-sm font-medium text-gray-900"
+            >Institution*</label
+          >
+          <input
+            type="text"
+            id="institution"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Enter 'None' if no affiliation"
+          />
+        </div>
+        <div>
+          <label
+            for="country"
+            class="block mb-1 text-sm font-medium text-gray-900"
+            >Country*</label
+          >
+          <input
+            type="text"
+            id="country"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="flex items-center">
+          <input
+            id="receive-emails"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+          />
+          <label for="receive-emails" class="ms-2 text-sm text-gray-700"
+            >Yes I would like to receive Edinburgh University Press
+            emails*</label
+          >
+        </div>
+        <button
+          type="submit"
+          class="text-white bg-[#00325f] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Journal news -->
+    <div class="bg-white p-4 md:p-5 shadow-lg rounded-sm">
+      <h3 class="text-lg font-medium text-[#00325f] mb-4">Journal news</h3>
+      <p class="text-sm text-gray-600">There are no results at this time</p>
+    </div>
+  </aside>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll("[data-tabs-target]");
+    const tabContents = document.querySelectorAll('[role="tabpanel"]');
+
+    function updateTabs(targetId) {
+      tabButtons.forEach((button) => {
+        const isSelected = button.getAttribute("data-tabs-target") === targetId;
+        button.setAttribute("aria-selected", isSelected);
+
+        // Reset classes
+        button.classList.remove(
+          "text-[#c51152]",
+          "border-[#c51152]",
+          "font-bold",
+          "text-gray-500",
+          "font-medium",
+          "border-transparent"
+        );
+
+        if (isSelected) {
+          button.classList.add(
+            "text-[#c51152]",
+            "border-[#c51152]",
+            "font-bold"
+          );
+        } else {
+          button.classList.add(
+            "text-gray-500",
+            "font-medium",
+            "border-transparent"
+          );
+        }
+      });
+
+      tabContents.forEach((content) => {
+        if (content.id === targetId.substring(1)) {
+          content.classList.remove("hidden");
+        } else {
+          content.classList.add("hidden");
+        }
+      });
+    }
+
+    tabButtons.forEach((button) => {
+      // Set text size for all tabs
+      button.classList.add("text-base");
+
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-tabs-target");
+        updateTabs(targetId);
+      });
+    });
+
+    // Initial state
+    updateTabs("#latest");
+  });
+</script>
+{% endblock %}
