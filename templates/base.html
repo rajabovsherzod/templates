@@ -73,6 +73,10 @@
         text-decoration: none !important;
         background-color: #f9fafb; /* bg-gray-50 */
       }
+      /* Force mobile nav toggle bg color */
+      .mobile-nav-toggle {
+        background-color: #00325f !important;
+      }
     </style>
   </head>
   <body class="bg-[#fafafa]">
@@ -81,7 +85,7 @@
       <div class="h-[144px] bg-[#385468]">
         <div class="h-[120px] flex items-center">
           <div
-            class="container mx-auto flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+            class="container mx-auto flex justify-between items-center px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
           >
             <h1 class="text-white text-xl sm:text-2xl lg:text-[28px] font-bold">
               Comparative Critical Studies
@@ -92,19 +96,26 @@
     </header>
 
     <!-- Main Body Container (for nav and content) -->
-    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28 lg:px-custom">
+    <div class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom">
       <!-- Overlapping Navigation -->
-      <nav class="bg-[#00325f] -mt-[34px] rounded-sm shadow-md relative z-10">
-        <!-- Mobile Menu Button ('Journal Home' trigger) -->
+      <nav
+        x-data="{ open: false, submitOpen: false, aboutOpen: false }"
+        class="-mt-[34px] rounded-sm shadow-md relative z-10"
+      >
+        <!-- Mobile nav toggle button -->
         <button
+          @click="open = !open"
           type="button"
-          data-collapse-toggle="navbar-accordion"
-          class="lg:hidden flex items-center justify-between w-full px-4 py-4 text-white font-bold"
-          aria-controls="navbar-accordion"
-          aria-expanded="false"
+          class="lg:hidden flex items-center justify-between w-full px-4 py-4 text-white font-bold bg-[#00325f] mobile-nav-toggle"
+          :aria-expanded="open"
         >
           <span>Journal Home</span>
-          <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <svg
+            :class="{'rotate-180': open}"
+            class="w-4 h-4 shrink-0 transition-transform"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
             <path
               fill-rule="evenodd"
               d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -115,7 +126,7 @@
 
         <!-- Desktop Menu -->
         <ul
-          class="hidden lg:flex justify-center items-center text-white text-sm font-bold"
+          class="hidden lg:flex justify-center items-center text-white text-sm font-bold bg-[#00325f]"
         >
           <li>
             <a
@@ -221,113 +232,106 @@
           </li>
         </ul>
 
-        <!-- Accordion Menu for Mobile -->
-        <div id="navbar-accordion" class="hidden lg:hidden w-full">
-          <div class="bg-white text-gray-800 rounded-b-sm">
-            <a href="#" class="block px-5 py-3 border-b border-gray-200"
-              >Current Issue</a
-            >
-            <a href="#" class="block px-5 py-3 border-b border-gray-200"
-              >All Issues</a
-            >
-            <div id="accordion-collapse" data-accordion="open">
-              <!-- Submit Section -->
-              <h2 id="accordion-collapse-heading-1">
-                <button
-                  type="button"
-                  class="flex items-center justify-between w-full px-5 py-3 border-b border-gray-200"
-                  data-accordion-target="#accordion-collapse-body-1"
-                  aria-expanded="false"
-                  aria-controls="accordion-collapse-body-1"
-                >
-                  <span>Submit</span>
-                  <svg
-                    data-accordion-icon
-                    class="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5 5 1 1 5"
-                    />
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-collapse-body-1"
-                class="hidden"
-                aria-labelledby="accordion-collapse-heading-1"
+        <!-- Mobile nav menu -->
+        <div
+          x-show="open"
+          x-transition
+          class="lg:hidden w-full bg-white shadow-md rounded-b-sm"
+        >
+          <ul class="flex flex-col font-medium text-[#00325f]">
+            <li>
+              <a
+                href="{% url 'index' %}"
+                class="block py-2 px-4{% if request.resolver_match.url_name == 'index' %} font-bold{% endif %}"
+                >Journal Home</a
               >
-                <div class="px-5 pt-2 pb-3 border-b border-gray-200 bg-white">
-                  <a href="#" class="block py-2">Submission Guidelines</a>
-                  <a href="#" class="block py-2">Permissions</a>
-                </div>
-              </div>
-              <!-- About Section -->
-              <h2 id="accordion-collapse-heading-2">
-                <button
-                  type="button"
-                  class="flex items-center justify-between w-full px-5 py-3 border-b border-gray-200"
-                  data-accordion-target="#accordion-collapse-body-2"
-                  aria-expanded="false"
-                  aria-controls="accordion-collapse-body-2"
-                >
-                  <span>About</span>
-                  <svg
-                    data-accordion-icon
-                    class="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5 5 1 1 5"
-                    />
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-collapse-body-2"
-                class="hidden"
-                aria-labelledby="accordion-collapse-heading-2"
+            </li>
+            <li>
+              <a href="{% url 'current_issue' %}" class="block py-2 px-4"
+                >Current Issue</a
               >
-                <div class="px-5 pt-2 pb-3 border-b border-gray-200 bg-white">
-                  <a
-                    href="{% url 'about_the_journal' %}"
-                    class="block py-2{% if request.resolver_match.url_name == 'about_the_journal' %} font-bold{% endif %}"
-                    >About the Journal</a
-                  >
-                  <a
-                    href="{% url 'editorial_board' %}"
-                    class="block py-2{% if request.resolver_match.url_name == 'editorial_board' %} font-bold{% endif %}"
-                    >Editorial Board</a
-                  >
-                  <a
-                    href="{% url 'society' %}"
-                    class="block py-2{% if request.resolver_match.url_name == 'society' %} font-bold{% endif %}"
-                    >Society</a
-                  >
-                  <a
-                    href="{% url 'indexing' %}"
-                    class="block py-2{% if request.resolver_match.url_name == 'indexing' %} font-bold{% endif %}"
-                    >Indexing</a
-                  >
-                </div>
+            </li>
+            <li>
+              <a href="{% url 'all_issues' %}" class="block py-2 px-4"
+                >All Issues</a
+              >
+            </li>
+            <!-- Submit dropdown -->
+            <li>
+              <button
+                @click="submitOpen = !submitOpen"
+                type="button"
+                class="flex items-center justify-between w-full py-2 px-4"
+              >
+                <span>Submit</span>
+                <svg
+                  :class="{'rotate-180': submitOpen}"
+                  class="w-4 h-4 ml-2 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <div x-show="submitOpen" x-transition class="pl-6">
+                <a
+                  href="{% url 'submission_guidelines' %}"
+                  class="block py-2 px-4"
+                  >Submission Guidelines</a
+                >
+                <a
+                  href="{% url 'how_to_access_articles' %}"
+                  class="block py-2 px-4"
+                  >Permissions</a
+                >
               </div>
-            </div>
-            <a href="#" class="block px-5 py-3 rounded-b-sm">Subscribe</a>
-          </div>
+            </li>
+            <!-- About dropdown -->
+            <li>
+              <button
+                @click="aboutOpen = !aboutOpen"
+                type="button"
+                class="flex items-center justify-between w-full py-2 px-4"
+              >
+                <span>About</span>
+                <svg
+                  :class="{'rotate-180': aboutOpen}"
+                  class="w-4 h-4 ml-2 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <div x-show="aboutOpen" x-transition class="pl-6">
+                <a href="{% url 'about_the_journal' %}" class="block py-2 px-4"
+                  >About the Journal</a
+                >
+                <a href="{% url 'editorial_board' %}" class="block py-2 px-4"
+                  >Editorial Board</a
+                >
+                <a href="{% url 'society' %}" class="block py-2 px-4"
+                  >Society</a
+                >
+                <a href="{% url 'indexing' %}" class="block py-2 px-4"
+                  >Indexing</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="{% url 'subscribe' %}" class="block py-2 px-4"
+                >Subscribe</a
+              >
+            </li>
+          </ul>
         </div>
       </nav>
 
@@ -336,7 +340,7 @@
 
     <footer class="bg-[#757374] text-gray-200 py-12 mt-12">
       <div
-        class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+        class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
       >
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div>
@@ -481,3 +485,8 @@
     </footer>
   </body>
 </html>
+<script>
+  if (window.initFlowbite) {
+    window.initFlowbite();
+  }
+</script>
