@@ -28,4 +28,10 @@ def permissions_for_our_content(request):
     return render(request, 'sumbit/permissions/permission_for_our_content.html')
 
 def cite_an_article(request):
-    return render(request, 'sumbit/permissions/cite_an_article.html') 
+    return render(request, 'sumbit/permissions/cite_an_article.html')
+
+def about_the_journal(request):
+    return render(request, 'about/about_the_journal.html')
+
+def editorial_board(request):
+    return render(request, 'about/editorial_board.html') 

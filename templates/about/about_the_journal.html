@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About the Journal{% endblock %}
+{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Chap qism: rasm va matn -->
+  <div class="col-span-12 md:col-span-8">
+    <div class="flex flex-col md:flex-row md:space-x-6 md:space-y-0 items-start">
+      <img
+        src="{% static 'assets/cover.jpg' %}"
+        alt="Comparative Critical Studies Cover"
+        class="w-48 flex-shrink-0 shadow-md mx-auto md:mx-0"
+      />
+      <div class="mt-6 md:mt-0 text-left text-gray-900 w-full">
+        <h1 class="text-[26px] font-bold mb-2">About the Journal</h1>
+        <div class="text-[15px] mb-2">
+          <span class="block">ISSN: 1744-1854</span>
+          <span class="block">eISSN: 1750-0109</span>
+        </div>
+      </div>
+    </div>
+    <!-- Description -->
+    <div class="mt-8 text-[15px]">
+      <p>
+        As the <span class="font-bold text-[#00325f]">British Comparative Literature Association</span>’s peer-reviewed house journal, <em>Comparative Critical Studies</em> seeks to advance methodological (self)reflection on the nature of comparative literature as a discipline. The journal invites contributions providing innovative perspectives on the theory and practice of the study of comparative literature in all its aspects, including but not restricted to: theory and history of comparative literary studies; comparative studies of conventions, genres, themes and periods; reception studies; comparative gender studies; transmediality; diasporas and the migration of culture from a literary perspective; and the theory and practice of literary translation and cultural transfer. The three annual issues include sections with open submission academic articles in the field of comparative literature, book reviews, the winners of the Dryden Translation Prize, the keynote lectures of the triennial BCLA conference, the Malcolm Bowie memorial lectures, and selected papers from BCLA conferences and workshops.
+      </p>
+    </div>
+  </div>
+  <!-- O'ng qism: DRY - sidebar_alerts komponentidan foydalaniladi -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include 'components/sidebar_alerts.html' %}
+  </aside>
+</div>
+{% endblock %}

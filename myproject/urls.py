@@ -30,4 +30,6 @@ urlpatterns = [
     path('permissions/activate-access-token/', views.activate_access_token, name='activate_access_token'),
     path('permissions/permissions-for-our-content/', views.permissions_for_our_content, name='permissions_for_our_content'),
     path('permissions/cite-an-article/', views.cite_an_article, name='cite_an_article'),
+    path('about-the-journal/', views.about_the_journal, name='about_the_journal'),
+    path('editorial-board/', views.editorial_board, name='editorial_board'),
 ]

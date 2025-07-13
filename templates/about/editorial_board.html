@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Editorial Board{% endblock %}
+{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Chap qism: matn -->
+  <div class="col-span-12 md:col-span-8">
+    <h1 class="text-[26px] font-bold mb-6">Editorial Board</h1>
+
+    <div class="mb-5">
+      <div class="text-[18px] font-bold mb-1">Editors</div>
+      <div class="text-[15px] space-y-1">
+        <div>Dr Jacob Blakesley, Sapienza Università di Roma</div>
+        <div>Dr Adhira Mangalagiri, New York University</div>
+        <div>Dr Rosa Mucignat, King's College London</div>
+        <div>Dr Elisa Segnini, University of Glasgow</div>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <div class="text-[18px] font-bold mb-1">Assistant Editor</div>
+      <div class="text-[15px]">Dr Jacob McGuinn, King's College London</div>
+    </div>
+
+    <div class="mb-5">
+      <div class="text-[18px] font-bold mb-1">Book Review Editor</div>
+      <div class="text-[15px]">Dr Ian Ellison, Goethe-Universität Frankfurt</div>
+    </div>
+
+    <div class="mb-2">
+      <div class="text-[18px] font-bold mb-1">Editorial Committee</div>
+      <div class="text-[15px] space-y-1">
+        <div>Francesca Billiani, University of Manchester</div>
+        <div>Rachel Bowlby, University College London</div>
+        <div>Peter Davies, University of Edinburgh</div>
+        <div>Glyn Hambrook, University of Wolverhampton</div>
+        <div>Richard Hibbitt, University of Leeds</div>
+        <div>Barry Ife, Birckbeck, University of London</div>
+        <div>Djelal Kadir, Penn State University</div>
+        <div>Maike Oergel, University of Nottingham</div>
+        <div>Naomi Segal, Birkbeck College, London</div>
+        <div>Juliette Taylor-Batty, Leeds Trinity University</div>
+        <div>Galin Tihanov, Queen Mary, University of London</div>
+        <div>Robert Vilain, University of Oxford</div>
+        <div>Edoardo Zuccato, Milan University</div>
+      </div>
+    </div>
+  </div>
+  <!-- O'ng qism: DRY - sidebar_alerts komponentidan foydalaniladi -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include 'components/sidebar_alerts.html' %}
+  </aside>
+</div>
+{% endblock %}
