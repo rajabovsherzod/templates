@@ -24,4 +24,5 @@ urlpatterns = [
     path('current-issue/', views.current_issue, name='current_issue'),
     path('all-issues/', views.all_issues, name='all_issues'),
     path('submission-guidelines/', views.submission_guidelines, name='submission_guidelines'),
+    path('permissions/how-to-access-articles/', views.how_to_access_articles, name='how_to_access_articles'),
 ]

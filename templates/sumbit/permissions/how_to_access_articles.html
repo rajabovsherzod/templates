@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}How to access articles{% endblock %}
+{% block content %}
+<div class="flex flex-col md:flex-row gap-8 items-start">
+  <!-- Sidebar chapda -->
+  <aside class="w-full md:w-[320px] flex-shrink-0 mt-0">
+    {% include 'sumbit/permissions/sidebar.html' %}
+  </aside>
+  <!-- O'ng content -->
+  <main class="flex-1 mt-0">
+    <h1 class="text-[26px] font-bold mb-5 leading-tight">How to access articles</h1>
+
+    <div class="mb-3">
+      <span class="font-bold text-[18px]">Through your library</span>
+      <p class="mt-1 text-[15px]">
+        If your library has access to our journals, you can read articles by clicking the Institutional Login option in the top right of your screen.
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <span class="font-bold text-[18px]">Individual subscriptions</span>
+      <p class="mt-1 text-[15px]">
+        Individual subscriptions to Edinburgh University Press journals are available as print only, online only or print plus online. An online subscription to the current year's content includes free access to all issues going back to 2005.
+      </p>
+      <p class="mt-1 text-[15px]">
+        Ordering information and prices for individual journals can be found on each journal's subscribe page. To view this information go to the
+        <span class="font-semibold text-[#00325f]">journal homepage</span>
+        you are interested in and click on <span class="font-semibold">subscribe/renew</span>.
+      </p>
+    </div>
+
+    <div>
+      <span class="font-bold text-[18px]">Pay Per View</span>
+      <p class="mt-1 text-[15px]">
+        You can also purchase access to an individual article for a limited period (48 hours). Simply click on the full text, PDF or EPUB for the desired article and follow the on-screen instructions. If you have lost access, you can restore your guest purchase
+        <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">here</a>.
+      </p>
+    </div>
+  </main>
+</div>
+{% endblock %}

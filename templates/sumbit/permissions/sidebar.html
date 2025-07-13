@@ -1,0 +1,75 @@
+<!-- Alpine.js kerak: <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> -->
+<div 
+  x-data="{ expanded: false }"
+  class="bg-white shadow-2xl rounded-sm w-full md:max-w-xs p-4 md:mx-0"
+>
+  <nav class="space-y-0.5">
+    <div class="text-[17px] font-semibold mb-4 text-left">For Readers</div>
+    <!-- NAV ITEMS: Kichik ekranda 3 ta nav va Expand All -->
+    <template x-if="!expanded">
+      <div>
+        <a href="#" class="block px-1 py-3 text-[16px] font-bold text-black text-left">How to access articles</a>
+        <hr class="my-0.5 border-gray-200">
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Library recommendation form</a>
+        <hr class="my-0.5 border-gray-200">
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Journal subscriptions</a>
+        <!-- Expand All button (only on small screens) -->
+        <div class="block md:hidden mt-2">
+          <button 
+            @click="expanded = true"
+            class="w-full flex flex-col items-center text-[#c51152] font-semibold focus:outline-none"
+          >
+            Expand All
+            <svg class="w-6 h-6 mt-1" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </template>
+    <!-- NAV ITEMS: Kichik ekranda Expand bo‘lsa va md+ har doim -->
+    <template x-if="expanded">
+      <div>
+        <a href="#" class="block px-1 py-3 text-[16px] font-bold text-black text-left">How to access articles</a>
+        <hr class="my-0.5 border-gray-200">
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Library recommendation form</a>
+        <hr class="my-0.5 border-gray-200">
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Journal subscriptions</a>
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Browse open access articles</a>
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Activate an access token</a>
+        <hr class="my-0.5 border-gray-200">
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Permissions for our content in other publications</a>
+        <hr class="my-0.5 border-gray-200">
+        <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Cite an article</a>
+        <hr class="my-0.5 border-gray-200">
+        <!-- Collapse button (only on small screens) -->
+        <div class="block md:hidden mt-2">
+          <button 
+            @click="expanded = false"
+            class="w-full flex flex-col items-center text-[#c51152] font-semibold focus:outline-none"
+          >
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+            </svg>
+            Collapse
+          </button>
+        </div>
+      </div>
+    </template>
+    <!-- On md+ screens always show all navs, hide expand/collapse -->
+    <div class="hidden md:block">
+      <a href="#" class="block px-1 py-3 text-[16px] font-bold text-black text-left">How to access articles</a>
+      <hr class="my-0.5 border-gray-200">
+      <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Library recommendation form</a>
+      <hr class="my-0.5 border-gray-200">
+      <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Journal subscriptions</a>
+      <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Browse open access articles</a>
+      <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Activate an access token</a>
+      <hr class="my-0.5 border-gray-200">
+      <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Permissions for our content in other publications</a>
+      <hr class="my-0.5 border-gray-200">
+      <a href="#" class="block px-1 py-3 text-[16px] font-normal text-black text-left hover:text-gray-500 transition">Cite an article</a>
+      <hr class="my-0.5 border-gray-200">
+    </div>
+  </nav>
+</div>

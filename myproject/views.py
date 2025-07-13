@@ -10,4 +10,7 @@ def all_issues(request):
     return render(request, 'all_issues.html')
 
 def submission_guidelines(request):
-    return render(request, 'submission_guidelines.html') 
+    return render(request, 'sumbit/submission_guidelines.html')
+
+def how_to_access_articles(request):
+    return render(request, 'sumbit/permissions/how_to_access_articles.html') 
