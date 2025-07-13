@@ -26,4 +26,8 @@ urlpatterns = [
     path('submission-guidelines/', views.submission_guidelines, name='submission_guidelines'),
     path('permissions/how-to-access-articles/', views.how_to_access_articles, name='how_to_access_articles'),
     path('permissions/library-recommendation-form/', views.library_recommendation_form, name='library_recommendation_form'),
+    path('permissions/journal-subscriptions/', views.journal_subscriptions, name='journal_subscriptions'),
+    path('permissions/activate-access-token/', views.activate_access_token, name='activate_access_token'),
+    path('permissions/permissions-for-our-content/', views.permissions_for_our_content, name='permissions_for_our_content'),
+    path('permissions/cite-an-article/', views.cite_an_article, name='cite_an_article'),
 ]

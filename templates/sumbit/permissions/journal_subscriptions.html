@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Journal subscriptions{% endblock %}
+{% block content %}
+<div class="flex flex-col md:flex-row gap-8 items-start">
+  <!-- Sidebar chapda -->
+  <aside class="w-full md:w-[320px] flex-shrink-0 mt-0">
+    {% include 'sumbit/permissions/sidebar.html' with active='journal_subscriptions' %}
+  </aside>
+  <!-- O'ng content -->
+  <main class="flex-1 mt-0">
+    <h1 class="text-[26px] font-bold mb-6">Journal subscriptions</h1>
+    <p class="mb-6 text-[15px]">
+      Subscriptions are for a calendar year and a complete volume. By subscribing directly with Edinburgh University Press, you or your institution will retain perpetual access to the content published in that subscription year.
+    </p>
+
+    <h2 class="text-[18px] font-bold mb-2 mt-6">Individuals</h2>
+    <p class="mb-4 text-[15px]">
+      Individual subscriptions to Edinburgh University Press journals are available as print only, online only or print plus online. An online subscription to the current year's content includes free access to all issues going back to 2005.
+    </p>
+    <p class="mb-4 text-[15px]">
+      Ordering information and prices for individual journals can be found on each journal's subscribe page. To view this information go to the
+      <a href="#" class="font-bold text-[#00325f] hover:underline">journal homepage</a>
+      you are interested in and click on <span class="font-bold">subscribe/renew</span>.
+    </p>
+
+    <h2 class="text-[18px] font-bold mb-2 mt-8">Institutions</h2>
+    <p class="mb-4 text-[15px]">
+      Institutional subscriptions to Edinburgh University Press journals are available as online only or print plus online. An online subscription to the current year's content includes free access to all issues going back to 2005. Edinburgh University Press operates a tiered pricing model for its journal subscriptions.
+    </p>
+    <p class="mb-2 text-[15px]">
+      View our
+      <a href="#" class="font-bold text-[#00325f] hover:underline">institutional journal subscriptions page.</a>
+    </p>
+  </main>
+</div>
+{% endblock %}

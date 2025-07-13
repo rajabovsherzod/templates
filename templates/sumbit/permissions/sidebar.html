@@ -6,26 +6,53 @@
     <div class="text-[17px] font-semibold mb-4 text-left">For Readers</div>
     <!-- DESKTOP: har doim barcha navlar -->
     <div class="hidden md:block">
-      <a href="{% url 'how_to_access_articles' %}" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'how_to_access_articles' %}font-bold{% else %}font-normal{% endif %}">How to access articles</a>
+      <a href="{% url 'how_to_access_articles' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'how_to_access_articles' %}font-bold{% else %}font-normal{% endif %}">
+        How to access articles
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="{% url 'library_recommendation_form' %}" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'library_recommendation_form' %}font-bold{% else %}font-normal{% endif %}">Library recommendation form</a>
+      <a href="{% url 'library_recommendation_form' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'library_recommendation_form' %}font-bold{% else %}font-normal{% endif %}">
+        Library recommendation form
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Journal subscriptions</a>
+      <a href="{% url 'journal_subscriptions' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'journal_subscriptions' %}font-bold{% else %}font-normal{% endif %}">
+        Journal subscriptions
+      </a>
       <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Browse open access articles</a>
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Activate an access token</a>
+      <a href="{% url 'activate_access_token' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'activate_access_token' %}font-bold{% else %}font-normal{% endif %}">
+        Activate an access token
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Permissions for our content in other publications</a>
+      <a href="{% url 'permissions_for_our_content' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'permissions_for_our_content' %}font-bold{% else %}font-normal{% endif %}">
+        Permissions for our content in other publications
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Cite an article</a>
+      <a href="{% url 'cite_an_article' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'cite_an_article' %}font-bold{% else %}font-normal{% endif %}">
+        Cite an article
+      </a>
       <hr class="my-0.5 border-gray-200" />
     </div>
     <!-- MOBILE: 3 ta nav + Expand All -->
     <div class="md:hidden" x-show="!expanded">
-      <a href="{% url 'how_to_access_articles' %}" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'how_to_access_articles' %}font-bold{% else %}font-normal{% endif %}">How to access articles</a>
+      <a href="{% url 'how_to_access_articles' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'how_to_access_articles' %}font-bold{% else %}font-normal{% endif %}">
+        How to access articles
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="{% url 'library_recommendation_form' %}" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'library_recommendation_form' %}font-bold{% else %}font-normal{% endif %}">Library recommendation form</a>
+      <a href="{% url 'library_recommendation_form' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'library_recommendation_form' %}font-bold{% else %}font-normal{% endif %}">
+        Library recommendation form
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Journal subscriptions</a>
+      <a href="{% url 'journal_subscriptions' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'journal_subscriptions' %}font-bold{% else %}font-normal{% endif %}">
+        Journal subscriptions
+      </a>
       <div class="mt-2">
         <button
           @click="expanded = true"
@@ -40,17 +67,35 @@
     </div>
     <!-- MOBILE: barcha navlar + Collapse -->
     <div class="md:hidden" x-show="expanded">
-      <a href="{% url 'how_to_access_articles' %}" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'how_to_access_articles' %}font-bold{% else %}font-normal{% endif %}">How to access articles</a>
+      <a href="{% url 'how_to_access_articles' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'how_to_access_articles' %}font-bold{% else %}font-normal{% endif %}">
+        How to access articles
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="{% url 'library_recommendation_form' %}" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'library_recommendation_form' %}font-bold{% else %}font-normal{% endif %}">Library recommendation form</a>
+      <a href="{% url 'library_recommendation_form' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'library_recommendation_form' %}font-bold{% else %}font-normal{% endif %}">
+        Library recommendation form
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Journal subscriptions</a>
+      <a href="{% url 'journal_subscriptions' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'journal_subscriptions' %}font-bold{% else %}font-normal{% endif %}">
+        Journal subscriptions
+      </a>
       <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Browse open access articles</a>
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Activate an access token</a>
+      <a href="{% url 'activate_access_token' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'activate_access_token' %}font-bold{% else %}font-normal{% endif %}">
+        Activate an access token
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Permissions for our content in other publications</a>
+      <a href="{% url 'permissions_for_our_content' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'permissions_for_our_content' %}font-bold{% else %}font-normal{% endif %}">
+        Permissions for our content in other publications
+      </a>
       <hr class="my-0.5 border-gray-200" />
-      <a href="#" class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition">Cite an article</a>
+      <a href="{% url 'cite_an_article' %}" 
+         class="block px-1 py-3 text-[16px] text-left text-black hover:text-gray-500 transition {% if request.resolver_match.url_name == 'cite_an_article' %}font-bold{% else %}font-normal{% endif %}">
+        Cite an article
+      </a>
       <hr class="my-0.5 border-gray-200" />
       <div class="mt-2">
         <button

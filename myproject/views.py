@@ -16,4 +16,16 @@ def how_to_access_articles(request):
     return render(request, 'sumbit/permissions/how_to_access_articles.html')
 
 def library_recommendation_form(request):
-    return render(request, 'sumbit/permissions/library-recommendation-form.html') 
+    return render(request, 'sumbit/permissions/library-recommendation-form.html')
+
+def journal_subscriptions(request):
+    return render(request, 'sumbit/permissions/journal_subscriptions.html')
+
+def activate_access_token(request):
+    return render(request, 'sumbit/permissions/activate_access_token.html')
+
+def permissions_for_our_content(request):
+    return render(request, 'sumbit/permissions/permission_for_our_content.html')
+
+def cite_an_article(request):
+    return render(request, 'sumbit/permissions/cite_an_article.html') 
