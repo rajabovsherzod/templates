@@ -5,21 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}My Project{% endblock %}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-      defer
-    ></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/flowbite.css' %}" />
+    <script src="{% static 'js/alpine.js' %}" defer></script>
+    <script src="{% static 'js/flowbite.js' %}"></script>
 
     <style>
       body {
@@ -48,6 +37,14 @@
       .nav-link.active > span::after {
         transform: scaleX(1);
         transform-origin: 50%;
+      }
+
+      /* Custom large padding for desktop */
+      @media (min-width: 1024px) {
+        .lg\:px-custom {
+          padding-left: 7rem !important;
+          padding-right: 7rem !important;
+        }
       }
 
       /* Smooth and slower accordion animation */
@@ -84,7 +81,7 @@
       <div class="h-[144px] bg-[#385468]">
         <div class="h-[120px] flex items-center">
           <div
-            class="container mx-auto flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-28"
+            class="container mx-auto flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
           >
             <h1 class="text-white text-xl sm:text-2xl lg:text-[28px] font-bold">
               Comparative Critical Studies
@@ -95,7 +92,7 @@
     </header>
 
     <!-- Main Body Container (for nav and content) -->
-    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28">
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28 lg:px-custom">
       <!-- Overlapping Navigation -->
       <nav class="bg-[#00325f] -mt-[34px] rounded-sm shadow-md relative z-10">
         <!-- Mobile Menu Button ('Journal Home' trigger) -->
@@ -123,7 +120,7 @@
           <li>
             <a
               href="{% url 'index' %}"
-              class="nav-link px-4 py-6 {% block nav_journal_home_active %}{% endblock %}"
+              class="nav-link px-4 py-6 {% if request.resolver_match.url_name == 'index' %} active{% endif %}"
               ><span>Journal Home</span></a
             >
           </li>
@@ -337,15 +334,17 @@
       <main class="py-8">{% block content %}{% endblock %}</main>
     </div>
 
-    <footer class="bg-[#757374] text-gray-300 py-12 mt-12">
-      <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          <div class="lg:col-span-2">
+    <footer class="bg-[#757374] text-gray-200 py-12 mt-12">
+      <div
+        class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div>
             <div class="mb-6">
               <img
                 src="{% static 'assets/footer-logo.png' %}"
                 alt="Edinburgh University Press Logo"
-                class="w-84"
+                class="w-80"
               />
             </div>
             <div class="text-xs space-y-4">
@@ -360,98 +359,96 @@
               </p>
             </div>
           </div>
-          <div
-            class="border-t pt-8 lg:border-t-0 lg:pt-0 lg:border-l lg:border-gray-500 lg:pl-8"
-          >
+          <div class="lg:border-l lg:border-gray-500 lg:pl-8">
             <h4 class="font-bold text-white mb-4">About us</h4>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Company information</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Annual Report</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Equity & sustainability</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Accessibility statement</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Terms & conditions</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Privacy & cookie policy</a
                 >
               </li>
             </ul>
           </div>
-          <div
-            class="border-t pt-8 lg:border-t-0 lg:pt-0 lg:border-l lg:border-gray-500 lg:pl-8"
-          >
+          <div class="lg:border-l lg:border-gray-500 lg:pl-8">
             <h4 class="font-bold text-white mb-4">I'm looking for</h4>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="#" class="text-white hover:text-gray-300">News</a>
+                <a href="#" class="text-white hover:text-gray-300 transition"
+                  >News</a
+                >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300">Blog</a>
+                <a href="#" class="text-white hover:text-gray-300 transition"
+                  >Blog</a
+                >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Early career researcher hub</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Open access hub</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >My guest purchases</a
                 >
               </li>
             </ul>
           </div>
-          <div
-            class="border-t pt-8 lg:border-t-0 lg:pt-0 lg:border-l lg:border-gray-500 lg:pl-8"
-          >
+          <div class="lg:border-l lg:border-gray-500 lg:pl-8">
             <h4 class="font-bold text-white mb-4">Contact us</h4>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Subscriptions</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Journal editors</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >General enquiries</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >All EUP contacts</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-gray-300"
+                <a href="#" class="text-white hover:text-gray-300 transition"
                   >Subscribe to our newsletter</a
                 >
               </li>
@@ -459,7 +456,7 @@
             <div class="flex space-x-4 mt-6">
               <a
                 href="#"
-                class="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center hover:bg-white hover:text-[#757374]"
+                class="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center hover:bg-white hover:text-[#757374] transition"
               >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -469,7 +466,7 @@
               </a>
               <a
                 href="#"
-                class="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center hover:bg-white hover:text-[#757374]"
+                class="w-8 h-8 border border-gray-500 rounded-full flex items-center justify-center hover:bg-white hover:text-[#757374] transition"
               >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -482,6 +479,5 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
 </html>
