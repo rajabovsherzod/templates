@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Library recommendation form{% endblock %}
+{% block content %}
+<div class="flex flex-col md:flex-row gap-8 items-start">
+  <!-- Sidebar chapda -->
+  <aside class="w-full md:w-[320px] flex-shrink-0 mt-0">
+    {% include 'sumbit/permissions/sidebar.html' %}
+  </aside>
+  <!-- O'ng content -->
+  <main class="flex-1 mt-0">
+    <h1 class="text-[26px] font-bold mb-4 leading-tight">Library recommendation form</h1>
+    <p class="mb-5 text-[15px]">
+      To recommend this title for online access to your librarian, complete this form:
+    </p>
+    <form class="space-y-6">
+      <!-- Personal details -->
+      <div>
+        <div class="font-semibold mb-2 text-[16px]">Your personal details:</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 text-[15px]" for="from">From:</label>
+            <input type="text" id="from" name="from" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+          </div>
+          <div>
+            <label class="block mb-1 text-[15px]" for="email">Email address:*</label>
+            <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+          </div>
+          <div>
+            <label class="block mb-1 text-[15px]" for="position">Position:</label>
+            <input type="text" id="position" name="position" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+          </div>
+          <div>
+            <label class="block mb-1 text-[15px]" for="department">Department:</label>
+            <input type="text" id="department" name="department" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+          </div>
+        </div>
+      </div>
+      <!-- Recommendation details -->
+      <div>
+        <div class="font-semibold mb-2 text-[16px]">I would like to recommend this title to:</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 text-[15px]" for="library">Library/Institution:</label>
+            <input type="text" id="library" name="library" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+          </div>
+          <div>
+            <label class="block mb-1 text-[15px]" for="librarian">Librarian:</label>
+            <input type="text" id="librarian" name="librarian" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+          </div>
+        </div>
+        <div class="mt-4 md:col-span-2">
+          <label class="block mb-1 text-[15px]" for="librarian_email">Email address:*</label>
+          <input type="email" id="librarian_email" name="librarian_email" class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]" />
+        </div>
+      </div>
+      <!-- Submit button (optional, hozircha yo'q) -->
+    </form>
+    <p class="mt-6 text-[15px]">
+      If you don't know your librarian's email address, please add the following address to the Email field above and we will forward the recommendation on for you:<br>
+      <span class="font-semibold text-[#00325f]">JournalRecommendation@eup.ed.ac.uk</span>.
+    </p>
+  </main>
+</div>
+{% endblock %}
