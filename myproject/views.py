@@ -7,4 +7,7 @@ def current_issue(request):
     return render(request, 'current_issue.html')
 
 def all_issues(request):
-    return render(request, 'all_issues.html') 
+    return render(request, 'all_issues.html')
+
+def submission_guidelines(request):
+    return render(request, 'submission_guidelines.html') 

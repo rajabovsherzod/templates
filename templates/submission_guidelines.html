@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Submission Guidelines{% endblock %}
+{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Chap qism: rasm va matn -->
+  <div class="col-span-12 md:col-span-8">
+    <div class="flex flex-col md:flex-row md:space-x-6 md:space-y-0 items-start">
+      <img
+        src="{% static 'assets/cover.jpg' %}"
+        alt="Journal Cover"
+        class="w-48 flex-shrink-0 shadow-md mx-auto md:mx-0"
+      />
+      <div class="mt-6 md:mt-0 text-left text-gray-900 w-full">
+        <h1 class="text-[26px] font-bold mb-2">Submission Guidelines</h1>
+        <div class="text-[15px] mb-2">
+          <span class="font-semibold">ISSN:</span> 1744-1854
+        </div>
+        <div class="text-[15px] mb-4">
+          <span class="font-semibold">eISSN:</span> 1750-0109
+        </div>
+        <div class="text-[15px] text-gray-800">
+          Comparative Critical Studies is the journal for comparative literature
+          as a discipline. Articles focus on innovative perspectives on the
+          theory and practice of the study of comparative literature in all its
+          aspects, including but not limited to: theory and history of
+          comparative literary studies; comparative studies of conventions,
+          genres, themes and periods; reception studies; comparative gender
+          studies; transmediality; diasporas and the migration of culture from a
+          literary perspective; and the theory and practice of literary
+          translation and cultural transfer.
+        </div>
+      </div>
+    </div>
+    <!-- Pastki universal o'ram -->
+    <div class="mt-10 text-[15px] text-gray-800 space-y-6">
+      <div>
+        All submission emails should contain the following declaration:
+        <span class="italic">"I confirm that the attached article is not currently under consideration elsewhere, and will not be submitted for consideration to any other journal or press while under consideration at <span class="italic">CCS</span>."</span>
+      </div>
+      <div>
+        Full author guidelines for <span class="italic">Comparative Critical Studies</span> are available
+        <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">here</a>.
+        Please consult these before submitting your article.
+      </div>
+      <div>
+        All submissions should be sent to
+        <a href="mailto:comparativecriticalstudies@gmail.com" style="color: #00325f; font-weight: 600; text-decoration: none;">comparativecriticalstudies@gmail.com</a>
+      </div>
+      <div>
+        <span class="font-bold">Books for Review</span><br>
+        Send books for review to:<br>
+        Dr Ian Ellison, Goethe-Universität Frankfurt:
+        <a href="mailto:ian.ellison@daad-alumni.de" style="color: #00325f; font-weight: 600; text-decoration: none;">ian.ellison@daad-alumni.de</a>
+      </div>
+      <div>
+        <span class="font-bold">Special Issues</span><br>
+        Comparative Critical Studies welcomes proposals from scholars to guest edit Special Issues on topics that fit within the scope of the journal and put forward innovative perspectives on the theory and practice of the study of comparative literature in all its aspects. The Special Issues we publish generally have 6 or 7 peer-reviewed essays in addition to the Guest Editor’s Introduction.
+        <span style="color: #00325f; font-weight: 600; text-decoration: none; display: block; margin-top: 4px;">Please click here for information on Special Issue proposals and Guest Editor responsibilities.</span>
+      </div>
+      <div>
+        <span class="font-bold">Journal Statistics</span><br>
+        In accordance with the requirements of Plan S, the journal publishes annual statistics on submissions and the review process. The journal statistics are as follows:
+      </div>
+      <!-- Jadval -->
+      <div class="overflow-x-auto mt-4">
+        <table style="border-collapse: collapse; background: #fff; font-size: 15px;">
+          <thead>
+            <tr>
+              <th style="border: 1px solid #ccc; width: 250.4px; padding: 15px; font-weight: normal;"></th>
+              <th style="border: 1px solid #ccc; width: 85.6px; padding: 15px; font-weight: bold;">2021</th>
+              <th style="border: 1px solid #ccc; width: 85.6px; padding: 15px; font-weight: bold;">2022</th>
+              <th style="border: 1px solid #ccc; width: 85.6px; padding: 15px; font-weight: bold;">2023</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #ccc; width: 250.4px; padding: 15px; text-align: left;">Number of submissions received<sup>1</sup></td>
+              <td style="border: 1px solid #ccc; width: 85.6px; padding: 15px; text-align: center;">29</td>
+              <td style="border: 1px solid #ccc; width: 85.6px; padding: 15px; text-align: center;">33</td>
+              <td style="border: 1px solid #ccc; width: 85.6px; padding: 15px; text-align: center;">51</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Number of reviews requested<sup>2</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">9</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">8</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">11</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Number of reviews received<sup>3</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">8</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">4</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">10</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Total rejections<sup>4</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">24</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">29</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">48</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Number of desk rejects<sup>5</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">20</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">28</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">46</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Total acceptances<sup>6</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">4</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">1</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">3</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Acceptance rate<sup>7</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">14%</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">3%</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">6%</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: left;">Time from submission to publication<sup>8</sup></td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">17 months</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">22 months</td>
+              <td style="border: 1px solid #ccc; padding: 15px; text-align: center;">15 months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <span class="font-bold">Definitions</span>
+        <ol class="list-decimal ml-6 mt-2 space-y-1">
+          <li>Number of new articles received by the journal</li>
+          <li>Number of peer review invitation emails that were sent out</li>
+          <li>Number of completed peer review reports received</li>
+          <li>Total number of articles rejected (including desk rejects)</li>
+          <li>Number of articles rejected prior to peer review</li>
+          <li>Number of articles that received an 'Accept for publication' decision</li>
+          <li>Number of acceptances, as a percentage, against the total number of final decisions</li>
+          <li>'Mean' average from submission to publication for all publications in the volume</li>
+        </ol>
+      </div>
+      <div>
+        <span class="font-bold">Author Copyright Form</span>
+        <p class="mt-1">
+          Prospective authors, please click
+          <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">here</a>
+          to download the author copyright form for submission with your article.
+        </p>
+      </div>
+      <div>
+        <span class="font-bold">Authorship</span>
+        <p class="mt-1">
+          In order to be considered an author or co-author of an article in
+          <span class="italic">Comparative Critical Studies</span>, a person must:
+        </p>
+        <p class="mt-2 ml-2">1) have made substantial contributions to the work</p>
+        <p class="ml-2">2) be willing to accept accountability for the work that was done and its presentation in a publication.</p>
+        <p class="mt-2">
+          The contributions to the manuscript of anyone who does not meet this criteria should be listed in the acknowledgements section. For example, things like general mentoring, collecting data, acting as study coordinator or providing comments on early versions of the manuscript do not constitute authorship, but should be noted in the acknowledgements for an article.
+        </p>
+        <p class="mt-2" style="color: #00325f; font-weight: 600; text-decoration: none;">
+          For any other questions on authorship (or other aspects of publication ethics) please click here.
+        </p>
+      </div>
+      <div>
+        <span class="font-bold">Fees</span>
+        <p class="mt-1">
+          There are no fees to submit or publish in any Edinburgh University Press journal. Separate fees apply for optional gold open access publication – please see below or visit our
+          <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">open access</a>
+          guidance for further information.
+        </p>
+      </div>
+      <div>
+        <span class="font-bold">Open access, archiving and social sharing</span>
+        <p class="mt-1">
+          All EUP journals are published on a Green Open Access basis, whereby authors are allowed to deposit a pre-publication version of their contribution on their personal or departmental web page and in their institutional repository. Authors are also permitted to deposit a pre-publication version of their contribution in a non-commercial subject repository one year following publication in print. The Version of Record of the article, as it appears in the journal following layout and proof correction, may not be deposited by authors in institutional repositories. Please visit our
+          <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">Copyright and Open Access Licenses</a>
+          page for full details of our self-archiving policy for all EUP journals.
+        </p>
+        <p class="mt-2">
+          Authors can also choose to pay a fee to make their article freely available online immediately via the EUP journals website. Please visit our
+          <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">open access</a>
+          page for full information on our gold open access publishing options.
+        </p>
+        <p class="mt-2">
+          A selection of EUP journals is included in our
+          <span style="color: #00325f; font-weight: 600; text-decoration: none;">Edinburgh Subscribe to Open</span>
+          initiative, in which journal volumes are converted to open access without fees to authors as long as they receive enough support from library subscribers.
+        </p>
+      </div>
+      <div>
+        <span class="font-bold">English language editing service</span>
+        <p class="mt-1">
+          Edinburgh University Press collaborates with Enago to provide academic English editing and translation services to help authors get their manuscript submission-ready. A special 20% discount is available for all EUP Authors. For more information, please visit
+          <a href="https://www.enago.com/eup" style="color: #00325f; font-weight: 600; text-decoration: none;">www.enago.com/eup</a>.
+        </p>
+      </div>
+      <div>
+        <span class="font-bold">Discounts for authors</span>
+        <p class="mt-1">
+          Journal Authors are entitled to a 40% discount on the journal issue containing their paper, a 40% discount on all EUP books and a 40% discount on any journal subscription. Please contact
+          <a href="mailto:marketing@eup.ed.ac.uk" style="color: #00325f; font-weight: 600; text-decoration: none;">marketing@eup.ed.ac.uk</a>
+          to order books at discount and
+          <a href="mailto:journals@eup.ed.ac.uk" style="color: #00325f; font-weight: 600; text-decoration: none;">journals@eup.ed.ac.uk</a>
+          for discounted journal subscriptions.
+        </p>
+      </div>
+      <div>
+        <span class="font-bold">Author hub</span>
+        <p class="mt-1">
+          Visit our
+          <a href="#" style="color: #00325f; font-weight: 600; text-decoration: none;">author hub</a>
+          for more information on publication ethics, clearing permissions, copyright and licenses, guidance for early career researchers, tips for promoting your work and more.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- O‘ng qism: cardlar -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include "components/sidebar_alerts.html" %}
+    <hr>
+    {% include "components/sidebar_news.html" %}
+  </aside>
+</div>
+{% endblock %}
+{% block nav_submit_active %}active{% endblock %}
