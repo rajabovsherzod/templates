@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Society{% endblock %}
+{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Chap qism: rasm va matn -->
+  <div class="col-span-12 md:col-span-8">
+    <div class="flex flex-col md:flex-row md:space-x-6 md:space-y-0 items-start">
+      <img
+        src="{% static 'assets/cover.jpg' %}"
+        alt="Comparative Critical Studies Cover"
+        class="w-48 flex-shrink-0 shadow-md mx-auto md:mx-0"
+      />
+      <div class="mt-6 md:mt-0 text-left text-gray-900 w-full">
+        <h1 class="text-[26px] font-bold mb-2">Society</h1>
+        <div class="text-[15px] mb-1">
+          <div>ISSN: 1744-1854</div>
+          <div>eISSN: 1750-0109</div>
+        </div>
+        <div class="text-[15px] mb-2">
+          <em>Comparative Critical Studies</em> is the journal for comparative literature as a discipline. Articles focus on innovative perspectives on the theory and practice of the study of comparative literature in all its aspects, including but not limited to: theory and history of comparative literary studies; comparative studies of conventions, genres, themes and periods; reception studies; comparative gender studies; transmediality; diasporas and the migration of culture from a literary perspective; and the theory and practice of literary translation and cultural transfer.
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-[15px]">
+      <p>
+        The British Comparative Literature Association (BCLA) was founded in 1975. It aims to promote the scholarly study of literature, the contexts of literature and the interaction between disciplines.
+      </p>
+      <p class="mt-4">Its principal activities are:</p>
+      <ul class="list-disc ml-6 mt-2 space-y-2">
+        <li>
+          The organisation of large-scale triennial conference and other smaller workshop conferences
+        </li>
+        <li>
+          The publication of the journal <em>Comparative Critical Studies</em> and of monographs on comparative literature
+        </li>
+        <li>
+          The organisation (with the British Centre for Literary Translation) of the John Dryden Translation Competition
+        </li>
+      </ul>
+      <p class="mt-4">
+        Membership of the BCLA is open to academic members of universities and other institutions of higher learning as well as to graduate students and to other persons with appropriate scholarly interests, both in Britain and abroad.
+      </p>
+      <p class="mt-4">
+        Visit <a href="https://www.bcla.org/" class="font-bold text-[#00325f] hover:underline">www.bcla.org</a> for further information and to join the British Comparative Literature Association.
+      </p>
+    </div>
+  </div>
+  <!-- O'ng qism: DRY - sidebar_alerts komponentidan foydalaniladi -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include 'components/sidebar_alerts.html' %}
+  </aside>
+</div>
+{% endblock %}

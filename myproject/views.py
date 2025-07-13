@@ -34,4 +34,13 @@ def about_the_journal(request):
     return render(request, 'about/about_the_journal.html')
 
 def editorial_board(request):
-    return render(request, 'about/editorial_board.html') 
+    return render(request, 'about/editorial_board.html')
+
+def society(request):
+    return render(request, 'about/society.html')
+
+def indexing(request):
+    return render(request, 'about/indexing.html')
+
+def subscribe(request):
+    return render(request, 'subscribe.html') 

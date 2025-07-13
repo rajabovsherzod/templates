@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Subscribe and Renew{% endblock %}
+{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Chap taraf: 2 ta accordion card -->
+  <div class="col-span-12 md:col-span-8">
+    <h1 class="text-[26px] font-bold mb-6">Subscribe and Renew</h1>
+    <div class="mb-10">
+      <div
+        x-data="{
+          items: [
+            {
+              title: 'Individual Subscribers and Society Members',
+              content: `Please select your subscription format from the options below`,
+            },
+            {
+              title: `Institutions and Libraries`,
+              content: `To subscribe directly, please contact our Subscriptions team at <a href='mailto:journals@eup.ed.ac.uk' class='underline text-[#00325f]'>journals@eup.ed.ac.uk</a> or place an order via your usual subscription agent. Please refer to the pricing summary below.<br><br>Librarians, please visit <a href='#' class='underline text-[#00325f]'>Customer Services</a> for information on activation, site licence, usage statistics, archiving and preservation and our journal transfer policy.<br><br>For more information on journal collection options and pricing <a href='#' class='underline text-[#00325f]'>click here</a> or contact our Subscriptions Team at <a href='mailto:journals@eup.ed.ac.uk' class='underline text-[#00325f]'>journals@eup.ed.ac.uk</a> or on +44(0)131 650 4218.`
+            }
+          ],
+          default_open: 0,
+          widthClass: 'w-full'
+        }"
+      >
+        {% include "components/accordion_card.html" %}
+      </div>
+    </div>
+  </div>
+  <!-- O'ng taraf: sidebar_alerts, sidebar_publisher, va pastda accordion card -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include 'components/sidebar_alerts.html' %}
+    {% include 'components/sidebar_publisher.html' %}
+    <div
+      x-data="{
+        items: [
+          {
+            title: 'Subscription information',
+            content: `Print & Online and Online subscriptions include perpetual access to content from the years subscribed, plus access to back content since 2005, where available, during the subscription period.<br><br>Prices for print subscriptions include delivery fees.<br><br>All subscriptions and memberships are based on the calendar year (January-December).<br><br>Online access starts from January in the subscription year.<br><br>Pre-payment is required for all orders and renewals.<br><br>Subscription and membership fees are non-refundable after the first issue of the year is published.`
+          },
+          {
+            title: 'Society information',
+            content: `Members of the British Comparative Literature Association (BCLA) receive a journal subscription with their membership. Please visit <a href='https://www.bcla.org/' class='underline text-[#00325f]'>www.bcla.org</a> for further information and to join the society.`
+          },
+          {
+            title: 'Pay Per View - Articles',
+            content: `To access a single article for 48 hours online, click on the article you wish to read and follow the instructions. 48-hour article access costs £35/$45. Buy 3 or more articles and receive a 25% discount!`
+          },
+          {
+            title: 'Back issues/single copies',
+            content: `Single issues to current/previous years can be purchased by individuals by contacting our Subscriptions department at <a href='mailto:journals@eup.ed.ac.uk' class='underline text-[#00325f]'>journals@eup.ed.ac.uk</a> or by navigating to an article in the issue you would like to purchase and selecting the 'Get Access' button.`
+          },
+          {
+            title: 'Journal collections pricing',
+            content: `Click <a href='#' class='underline text-[#00325f]'>here</a> for information on the complete EUP journals collection and smaller subject collections. For further information on discounts or multiple subscriptions, please email <a href='mailto:journals@eup.ed.ac.uk' class='underline text-[#00325f]'>journals@eup.ed.ac.uk</a>.`
+          },
+          {
+            title: 'Edinburgh journals archive',
+            content: `Institutions may buy the Edinburgh Journals Archive outright, or subscribe on an annual basis. To find out more, visit our <a href='#' class='underline text-[#00325f]'>Edinburgh Journals Archive information page</a>. The Archive contains all available back content across our journals.`
+          },
+          {
+            title: 'Low and middle income countries',
+            content: `Edinburgh University Press supports the dissemination of high-quality research and academic knowledge worldwide. <a href='#' class='underline text-[#00325f]'>Click here</a> for information on access to EUP journals in developing nations.`
+          }
+        ],
+        default_open: -1,
+        widthClass: 'w-full'
+      }"
+    >
+      {% include "components/accordion_card.html" %}
+    </div>
+  </aside>
+</div>
+{% endblock %}

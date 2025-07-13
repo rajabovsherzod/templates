@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Indexing{% endblock %}
+{% block content %}
+<div class="grid grid-cols-12 gap-8 px-4 md:px-8">
+  <!-- Left: Indexing info -->
+  <div class="col-span-12 md:col-span-8">
+    <h1 class="text-[26px] font-bold mb-4">Indexing</h1>
+    <div class="text-[15px] mb-4">
+      <em>Comparative Critical Studies</em> is abstracted and indexed in the following:
+    </div>
+    <ul class="list-disc ml-6 text-[15px] space-y-1">
+      <li>ANVUR</li>
+      <li>Art, Design and Architecture Collection (ProQuest)</li>
+      <li>ArticleFirst</li>
+      <li>Arts and Humanities Database (ProQuest)</li>
+      <li>Arts Premium Collection (ProQuest)</li>
+      <li>Australian Research Council ERA 2012 Journal List</li>
+      <li>British Library Zetoc</li>
+      <li>BrowZine</li>
+      <li>CNKI (China National Knowledge Infrastructure)</li>
+      <li>cnpLINKer</li>
+      <li>Current Contents®/Arts & Humanities</li>
+      <li>EBSCO A-to-Z</li>
+      <li>EBSCO Discovery Service</li>
+      <li>European Reference Index for the Humanities (ERIH PLUS)</li>
+      <li>Genamics JournalSeek</li>
+      <li>Humanities International Complete</li>
+      <li>Humanities International Index</li>
+      <li>Humanities Source</li>
+      <li>Humanities Source Ultimate</li>
+      <li>IBR: International Bibliography of Book Reviews of Scholarly Literature on the Humanities and Social Sciences</li>
+      <li>IBZ: International Bibliography of Periodical Literature on the Humanities and Social Sciences</li>
+      <li>J-Gate</li>
+      <li>JournalTOCs</li>
+      <li>Literary Reference Center</li>
+      <li>Literary Reference Center Plus</li>
+      <li>MLA (Modern Language Association) International Bibliography</li>
+      <li>MLA Full Text Accessibility</li>
+      <li>Norwegian Register for Scientific Journals, Series and Publishers</li>
+      <li>ProQuest Central</li>
+      <li>ProQuest Central Basic</li>
+      <li>ProQuest Central Essentials</li>
+      <li>Publication Forum (JuFo)</li>
+      <li>ReadCube Discover</li>
+      <li>Researcher</li>
+      <li>Scilit</li>
+      <li>SCImago Journal Ranking</li>
+      <li>Scopus</li>
+      <li>Summon</li>
+      <li>TDNet</li>
+      <li>TOC Premier</li>
+      <li>Web of Science/Arts and Humanities Citation Index®</li>
+      <li>WorldCat Discovery</li>
+    </ul>
+  </div>
+  <!-- Right: Sidebar alerts -->
+  <aside class="col-span-12 md:col-span-4 space-y-6">
+    {% include 'components/sidebar_alerts.html' %}
+  </aside>
+</div>
+{% endblock %}

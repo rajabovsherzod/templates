@@ -195,24 +195,32 @@
             >
               <a
                 href="{% url 'about_the_journal' %}"
-                class="block px-4 py-2 text-sm hover:bg-gray-100"
+                class="block px-4 py-2 text-sm hover:bg-gray-100{% if request.resolver_match.url_name == 'about_the_journal' %} font-bold{% endif %}"
                 >About the Journal</a
               >
               <a
                 href="{% url 'editorial_board' %}"
-                class="block px-4 py-2 text-sm hover:bg-gray-100"
+                class="block px-4 py-2 text-sm hover:bg-gray-100{% if request.resolver_match.url_name == 'editorial_board' %} font-bold{% endif %}"
                 >Editorial Board</a
               >
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100"
+              <a
+                href="{% url 'society' %}"
+                class="block px-4 py-2 text-sm hover:bg-gray-100{% if request.resolver_match.url_name == 'society' %} font-bold{% endif %}"
                 >Society</a
               >
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100"
+              <a
+                href="{% url 'indexing' %}"
+                class="block px-4 py-2 text-sm hover:bg-gray-100{% if request.resolver_match.url_name == 'indexing' %} font-bold{% endif %}"
                 >Indexing</a
               >
             </div>
           </li>
           <li>
-            <a href="#" class="nav-link px-4 py-6"><span>Subscribe</span></a>
+            <a
+              href="{% url 'subscribe' %}"
+              class="nav-link px-4 py-6{% if request.resolver_match.url_name == 'subscribe' %} font-bold{% endif %}"
+              ><span>Subscribe</span></a
+            >
           </li>
         </ul>
 
@@ -298,10 +306,26 @@
                 aria-labelledby="accordion-collapse-heading-2"
               >
                 <div class="px-5 pt-2 pb-3 border-b border-gray-200 bg-white">
-                  <a href="#" class="block py-2">About the Journal</a>
-                  <a href="#" class="block py-2">Editorial Board</a>
-                  <a href="#" class="block py-2">Society</a>
-                  <a href="#" class="block py-2">Indexing</a>
+                  <a
+                    href="{% url 'about_the_journal' %}"
+                    class="block py-2{% if request.resolver_match.url_name == 'about_the_journal' %} font-bold{% endif %}"
+                    >About the Journal</a
+                  >
+                  <a
+                    href="{% url 'editorial_board' %}"
+                    class="block py-2{% if request.resolver_match.url_name == 'editorial_board' %} font-bold{% endif %}"
+                    >Editorial Board</a
+                  >
+                  <a
+                    href="{% url 'society' %}"
+                    class="block py-2{% if request.resolver_match.url_name == 'society' %} font-bold{% endif %}"
+                    >Society</a
+                  >
+                  <a
+                    href="{% url 'indexing' %}"
+                    class="block py-2{% if request.resolver_match.url_name == 'indexing' %} font-bold{% endif %}"
+                    >Indexing</a
+                  >
                 </div>
               </div>
             </div>

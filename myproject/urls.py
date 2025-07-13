@@ -32,4 +32,7 @@ urlpatterns = [
     path('permissions/cite-an-article/', views.cite_an_article, name='cite_an_article'),
     path('about-the-journal/', views.about_the_journal, name='about_the_journal'),
     path('editorial-board/', views.editorial_board, name='editorial_board'),
+    path('about/society/', views.society, name='society'),
+    path('about/indexing/', views.indexing, name='indexing'),
+    path('subscribe/', views.subscribe, name='subscribe'),
 ]
