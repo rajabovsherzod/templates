@@ -1,20 +1,30 @@
-{% extends 'base.html' %}
-{% block title %}Cite an article{% endblock %}
-{% block content %}
-<div class="flex flex-col md:flex-row gap-8 items-start">
-  <!-- Sidebar chapda -->
-  <aside class="w-full md:w-[320px] flex-shrink-0 mt-0">
-    {% include 'sumbit/permissions/sidebar.html' with active='cite_an_article' %}
-  </aside>
-  <!-- O'ng content -->
-  <main class="flex-1 mt-0">
-    <h1 class="text-[26px] font-bold mb-6">Cite an article</h1>
-    <p class="mb-5 text-[15px]">
-      The bibliographic details for each article can be downloaded to a citation manager, allowing the user to cite the article in their own work. To view or download a citation, please visit any article page and click the ‘View citations’ icon or the Metrics and Citations tab of the article sidebar.
-    </p>
-    <p class="mb-5 text-[15px]">
-      Registered users can opt to track citations of multiple articles by email or RSS feed, so that they receive notification when a selected article is cited. Simply select the relevant article (or articles) on a journal issue Table of Contents page and choose ‘Track Citation’ from the <span class="font-bold">Article Tools drop-down menu.</span>
-    </p>
-  </main>
+{% extends 'base.html' %} 
+{% block title %}Cite an article{% endblock %} 
+{%block content %}
+<div class="container mx-auto px-4 md:px-8 gap-8">
+  <div class="grid grid-cols-12 gap-8">
+    <!-- Sidebar chapda -->
+    <aside class="col-span-12 md:col-span-4 space-y-6">
+      {% include 'sumbit/permissions/sidebar.html' with active='cite_an_article'%}
+    </aside>
+    <!-- O'ng content -->
+    <section class="col-span-12 md:col-span-8">
+      <h1 class="text-[26px] font-bold mb-6">Cite an article</h1>
+      <p class="mb-5 text-[15px]">
+        The bibliographic details for each article can be downloaded to a
+        citation manager, allowing the user to cite the article in their own
+        work. To view or download a citation, please visit any article page and
+        click the ‘View citations’ icon or the Metrics and Citations tab of the
+        article sidebar.
+      </p>
+      <p class="mb-5 text-[15px]">
+        Registered users can opt to track citations of multiple articles by
+        email or RSS feed, so that they receive notification when a selected
+        article is cited. Simply select the relevant article (or articles) on a
+        journal issue Table of Contents page and choose ‘Track Citation’ from
+        the <span class="font-bold">Article Tools drop-down menu.</span>
+      </p>
+    </section>
+  </div>
 </div>
 {% endblock %}

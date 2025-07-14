@@ -1,45 +1,78 @@
-{% extends 'base.html' %}
-{% block title %}Permissions for our content in other publications{% endblock %}
-{% block content %}
-<div class="flex flex-col md:flex-row gap-8 items-start">
-  <!-- Sidebar chapda -->
-  <aside class="w-full md:w-[320px] flex-shrink-0 mt-0">
-    {% include 'sumbit/permissions/sidebar.html' with active='permissions_other_publications' %}
-  </aside>
-  <!-- O'ng content -->
-  <main class="flex-1 mt-0">
-    <h1 class="text-[26px] font-bold mb-6">Permissions for our content in other publications</h1>
-    <p class="mb-5 text-[15px]">
-      All permissions to reproduce any kind of third party material must be cleared prior to the article being sent to Edinburgh University Press for publication. The editor of the journal you are submitting to will provide you with guidance in obtaining permissions.
-    </p>
-    <p class="mb-5 text-[15px]">
-      Requests to use content from an Edinburgh University Press journal are handled by PLSclear. To get started, use the search box below. You can search by ISSN, author, title or keyword – searching by ISSN will give you the most accurate result.
-    </p>
-    <p class="mb-5 text-[15px]">
-      If you would like to use material published in an Edinburgh University Press book, please refer to our
-      <a href="#" class="font-bold text-gray-500 hover:underline">book permissions</a> page.
-    </p>
-    <p class="mb-5 text-[15px]">
-      <span class="font-bold">If you are an author</span> and would like to deposit or re-use your material, please refer to our
-      <a href="#" class="font-bold text-[#00325f] hover:underline">reuse, self-archiving and sharing guidelines.</a>
-    </p>
-    <h2 class="text-[18px] font-bold mb-2 mt-8">Search Tips</h2>
-    <p class="mb-4 text-[15px]">
-      Please search for a <span class="font-bold">journal title or ISSN</span> in the box below to get started (please do not search by article title or author at this stage).
-    </p>
-    <!-- Search box imitation -->
-    <div class="flex items-center mb-2">
-      <input type="text" class="border border-gray-300 rounded-l px-3 py-2 w-full text-[15px]" placeholder="" />
-      <select class="border-t border-b border-gray-300 px-2 py-2 text-[15px]">
-        <option>Keyword search</option>
-      </select>
-      <button class="bg-[#f37021] px-4 py-2 rounded-r flex items-center">
-        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM8 14A6 6 0 108 2a6 6 0 000 12z" clip-rule="evenodd"/>
-        </svg>
-      </button>
-    </div>
-    <div class="text-[11px] text-gray-500 pl-1">powered by: <span class="font-bold">PLSclear</span></div>
-  </main>
+{% extends 'base.html' %} {% block title %}Permissions for our content in other
+publications{% endblock %} {% block content %}
+<div class="container mx-auto px-4 md:px-8 gap-8">
+  <div class="grid grid-cols-12 gap-8">
+    <!-- Sidebar chapda -->
+    <aside class="col-span-12 md:col-span-4 space-y-6">
+      {% include 'sumbit/permissions/sidebar.html' with active='permissions_other_publications' %}
+    </aside>
+    <!-- O'ng content -->
+    <section class="col-span-12 md:col-span-8">
+      <h1 class="text-[26px] font-bold mb-6">
+        Permissions for our content in other publications
+      </h1>
+      <p class="mb-5 text-[15px]">
+        All permissions to reproduce any kind of third party material must be
+        cleared prior to the article being sent to Edinburgh University Press
+        for publication. The editor of the journal you are submitting to will
+        provide you with guidance in obtaining permissions.
+      </p>
+      <p class="mb-5 text-[15px]">
+        Requests to use content from an Edinburgh University Press journal are
+        handled by PLSclear. To get started, use the search box below. You can
+        search by ISSN, author, title or keyword – searching by ISSN will give
+        you the most accurate result.
+      </p>
+      <p class="mb-5 text-[15px]">
+        If you would like to use material published in an Edinburgh University
+        Press book, please refer to our
+        <a href="#" class="font-bold text-gray-500 hover:underline"
+          >book permissions</a
+        >
+        page.
+      </p>
+      <p class="mb-5 text-[15px]">
+        <span class="font-bold">If you are an author</span> and would like to
+        deposit or re-use your material, please refer to our
+        <a href="#" class="font-bold text-[#00325f] hover:underline"
+          >reuse, self-archiving and sharing guidelines.</a
+        >
+      </p>
+      <h2 class="text-[18px] font-bold mb-2 mt-8">Search Tips</h2>
+      <p class="mb-4 text-[15px]">
+        Please search for a
+        <span class="font-bold">journal title or ISSN</span> in the box below to
+        get started (please do not search by article title or author at this
+        stage).
+      </p>
+      <!-- Search box imitation -->
+      <div class="flex items-center mb-2">
+        <input
+          type="text"
+          class="border border-gray-300 rounded-l px-3 py-2 w-full text-[15px]"
+          placeholder=""
+        />
+        <select class="border-t border-b border-gray-300 px-2 py-2 text-[15px]">
+          <option>Keyword search</option>
+        </select>
+        <button class="bg-[#f37021] px-4 py-2 rounded-r flex items-center">
+          <svg
+            class="w-5 h-5 text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM8 14A6 6 0 108 2a6 6 0 000 12z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="text-[11px] text-gray-500 pl-1">
+        powered by: <span class="font-bold">PLSclear</span>
+      </div>
+    </section>
+  </div>
 </div>
 {% endblock %}

@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{% block title %}Library recommendation form{% endblock %}
+{% extends 'base.html' %} 
+{% block title %}Library recommendation form{%endblock %} 
 {% block content %}
 <style>
   input[type="checkbox"] {
@@ -27,260 +27,254 @@
     }
   }
 </style>
-<div class="flex flex-col md:flex-row gap-8 items-start">
-  <!-- Sidebar chapda -->
-  <aside class="w-full md:w-[320px] flex-shrink-0 mt-0">
-    {% include 'sumbit/permissions/sidebar.html' %}
-  </aside>
-  <!-- O'ng content -->
-  <main class="flex-1 mt-0">
-    <h1 class="text-[26px] font-bold mb-4 leading-tight">
-      Library recommendation form
-    </h1>
-    <p class="mb-5 text-[15px]">
-      To recommend this title for online access to your librarian, complete this
-      form:
-    </p>
-    <form class="space-y-6">
-      <!-- Personal details -->
-      <div>
-        <div class="font-semibold mb-2 text-[16px]">Your personal details:</div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block mb-1 text-[15px]" for="from">From:</label>
-            <input
-              type="text"
-              id="from"
-              name="from"
-              class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-            />
+<div class="container mx-auto px-4 md:px-8 gap-8">
+  <div class="grid grid-cols-12 gap-8">
+    <!-- Sidebar chapda -->
+    <aside class="col-span-12 md:col-span-4 space-y-6">
+      {% include 'sumbit/permissions/sidebar.html' %}
+    </aside>
+    <!-- O'ng content -->
+    <section class="col-span-12 md:col-span-8">
+      <h1 class="text-[26px] font-bold mb-4 leading-tight">
+        Library recommendation form
+      </h1>
+      <p class="mb-5 text-[15px]">
+        To recommend this title for online access to your librarian, complete
+        this form:
+      </p>
+      <form class="space-y-6">
+        <!-- Personal details -->
+        <div>
+          <div class="font-semibold mb-2 text-[16px]">
+            Your personal details:
           </div>
-          <div>
-            <label class="block mb-1 text-[15px]" for="email"
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block mb-1 text-[15px]" for="from">From:</label>
+              <input
+                type="text"
+                id="from"
+                name="from"
+                class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
+              />
+            </div>
+            <div>
+              <label class="block mb-1 text-[15px]" for="email"
+                >Email address:*</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
+              />
+            </div>
+            <div>
+              <label class="block mb-1 text-[15px]" for="position"
+                >Position:</label
+              >
+              <input
+                type="text"
+                id="position"
+                name="position"
+                class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
+              />
+            </div>
+            <div>
+              <label class="block mb-1 text-[15px]" for="department"
+                >Department:</label
+              >
+              <input
+                type="text"
+                id="department"
+                name="department"
+                class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Recommendation details -->
+        <div>
+          <div class="font-semibold mb-2 text-[16px]">
+            I would like to recommend this title to:
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block mb-1 text-[15px]" for="library"
+                >Library/Institution:</label
+              >
+              <input
+                type="text"
+                id="library"
+                name="library"
+                class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
+              />
+            </div>
+            <div>
+              <label class="block mb-1 text-[15px]" for="librarian"
+                >Librarian:</label
+              >
+              <input
+                type="text"
+                id="librarian"
+                name="librarian"
+                class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
+              />
+            </div>
+          </div>
+          <div class="mt-4 md:col-span-2">
+            <label class="block mb-1 text-[15px]" for="librarian_email"
               >Email address:*</label
             >
             <input
               type="email"
-              id="email"
-              name="email"
-              class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-            />
-          </div>
-          <div>
-            <label class="block mb-1 text-[15px]" for="position"
-              >Position:</label
-            >
-            <input
-              type="text"
-              id="position"
-              name="position"
-              class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-            />
-          </div>
-          <div>
-            <label class="block mb-1 text-[15px]" for="department"
-              >Department:</label
-            >
-            <input
-              type="text"
-              id="department"
-              name="department"
+              id="librarian_email"
+              name="librarian_email"
               class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
             />
           </div>
         </div>
-      </div>
-      <!-- Recommendation details -->
-      <div>
-        <div class="font-semibold mb-2 text-[16px]">
-          I would like to recommend this title to:
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block mb-1 text-[15px]" for="library"
-              >Library/Institution:</label
+        <!-- Recommend Specific Publications (NEW SECTION) -->
+        <hr class="my-6 border-gray-300" />
+        <div>
+          <h2 class="text-[28px] font-semibold mb-2">
+            Recommend Specific Publications
+          </h2>
+          <p class="mb-4 text-[17px]">
+            I would like to recommend the following publication/s as valuable
+            additions to the organisation's collection of scientific information
+            sources.
+          </p>
+          <div class="mb-6">
+            <label
+              class="block mb-1 text-[16px] font-semibold"
+              for="publications"
+              >Publications</label
             >
-            <input
-              type="text"
-              id="library"
-              name="library"
-              class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-            />
-          </div>
-          <div>
-            <label class="block mb-1 text-[15px]" for="librarian"
-              >Librarian:</label
-            >
-            <input
-              type="text"
-              id="librarian"
-              name="librarian"
-              class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-            />
-          </div>
-        </div>
-        <div class="mt-4 md:col-span-2">
-          <label class="block mb-1 text-[15px]" for="librarian_email"
-            >Email address:*</label
-          >
-          <input
-            type="email"
-            id="librarian_email"
-            name="librarian_email"
-            class="w-full border border-gray-300 rounded px-3 py-2 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-          />
-        </div>
-      </div>
-      <!-- Recommend Specific Publications (NEW SECTION) -->
-      <hr class="my-6 border-gray-300" />
-      <div>
-        <h2 class="text-[28px] font-semibold mb-2">
-          Recommend Specific Publications
-        </h2>
-        <p class="mb-4 text-[17px]">
-          I would like to recommend the following publication/s as valuable
-          additions to the organisation's collection of scientific information
-          sources.
-        </p>
-        <div class="mb-6">
-          <label class="block mb-1 text-[16px] font-semibold" for="publications"
-            >Publications</label
-          >
-          <div class="flex">
-            <select
-              id="publications"
-              name="publications"
-              class="w-full border border-gray-300 rounded-l px-3 py-2 text-[16px] italic text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00325f]"
-            >
-              <option selected disabled>Please Select</option>
-              <option>Comparative Critical Studies</option>
-              <option>Journal of Modern Literature</option>
-              <option>Other...</option>
-            </select>
-            <button
-              type="button"
-              tabindex="-1"
-              class="border border-l-0 border-gray-300 rounded-r px-4 py-2 bg-white text-gray-700 flex items-center"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
+            <div class="flex">
+              <select
+                id="publications"
+                name="publications"
+                class="w-full border border-gray-300 rounded-l px-3 py-2 text-[16px] italic text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00325f]"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19 9l-7 7-7-7"
+                <option selected disabled>Please Select</option>
+                <option>Comparative Critical Studies</option>
+                <option>Journal of Modern Literature</option>
+                <option>Other...</option>
+              </select>
+              <button
+                type="button"
+                tabindex="-1"
+                class="border border-l-0 border-gray-300 rounded-r px-4 py-2 bg-white text-gray-700 flex items-center"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <hr class="my-6 border-gray-300" />
+          <div>
+            <div class="font-semibold text-[19px] mb-2">
+              I recommend the publication for the following reasons:
+            </div>
+            <div class="space-y-3">
+              <label class="flex items-start gap-2 text-[16px]">
+                <input type="checkbox" class="mt-1" name="reason_reference" />
+                <span>
+                  <span class="font-bold">Reference</span>
+                  <span class="font-normal">
+                    — I will refer to this publication frequently for new
+                    research articles related to my work.</span
+                  >
+                </span>
+              </label>
+              <label class="flex items-start gap-2 text-[16px]">
+                <input
+                  type="checkbox"
+                  class="mt-1"
+                  name="reason_student_reference"
                 />
-              </svg>
+                <span>
+                  <span class="font-bold">Student reference</span>
+                  <span class="font-normal">
+                    — I will refer my students to this publication regularly to
+                    assist their studies.</span
+                  >
+                </span>
+              </label>
+              <label class="flex items-start gap-2 text-[16px]">
+                <input type="checkbox" class="mt-1" name="reason_benefit" />
+                <span>
+                  <span class="font-bold"
+                    >Benefit to the library's collection</span
+                  >
+                  <span class="font-normal">
+                    — My assessment of this publication is positive. Its
+                    acquisition will benefit department, faculty and student
+                    needs.</span
+                  >
+                </span>
+              </label>
+              <label class="flex items-start gap-2 text-[16px]">
+                <input type="checkbox" class="mt-1" name="reason_affiliation" />
+                <span>
+                  <span class="font-bold">Affiliation</span>
+                  <span class="font-normal">
+                    — I'm a member of the publication's editorial board and
+                    strongly support the publication. I will regularly recommend
+                    articles to colleagues and students.</span
+                  >
+                </span>
+              </label>
+            </div>
+          </div>
+          <hr class="my-6 border-gray-300" />
+          <div class="text-[15px] mb-2">
+            <span class="font-semibold">Privacy statement:</span>
+            Information entered on this form may be recorded by the publisher,
+            but will not be used to send unsolicited e-mails or shared with any
+            third party.
+          </div>
+          <div class="text-[15px] mb-2">
+            <span class="italic">*</span> Marks a required field
+          </div>
+          <!-- BUTTONLAR O'NGDA -->
+          <div class="form-actions-right">
+            <button
+              type="submit"
+              class="bg-[#00325f] text-white px-6 py-2 rounded font-semibold text-[16px] hover:bg-[#002244] transition"
+            >
+              Submit
+            </button>
+            <button
+              type="reset"
+              class="bg-[#00325f] text-white px-6 py-2 rounded font-semibold text-[16px] hover:bg-[#002244] transition"
+            >
+              Clear
             </button>
           </div>
         </div>
-        <hr class="my-6 border-gray-300" />
-        <div>
-          <div class="font-semibold text-[19px] mb-2">
-            I recommend the publication for the following reasons:
-          </div>
-          <div class="space-y-3">
-            <label class="flex items-start gap-2 text-[16px]">
-              <input
-                type="checkbox"
-                class="mt-1"
-                name="reason_reference"
-              />
-              <span>
-                <span class="font-bold">Reference</span>
-                <span class="font-normal">
-                  — I will refer to this publication frequently for new research
-                  articles related to my work.</span
-                >
-              </span>
-            </label>
-            <label class="flex items-start gap-2 text-[16px]">
-              <input
-                type="checkbox"
-                class="mt-1"
-                name="reason_student_reference"
-              />
-              <span>
-                <span class="font-bold">Student reference</span>
-                <span class="font-normal">
-                  — I will refer my students to this publication regularly to
-                  assist their studies.</span
-                >
-              </span>
-            </label>
-            <label class="flex items-start gap-2 text-[16px]">
-              <input
-                type="checkbox"
-                class="mt-1"
-                name="reason_benefit"
-              />
-              <span>
-                <span class="font-bold"
-                  >Benefit to the library's collection</span
-                >
-                <span class="font-normal">
-                  — My assessment of this publication is positive. Its
-                  acquisition will benefit department, faculty and student
-                  needs.</span
-                >
-              </span>
-            </label>
-            <label class="flex items-start gap-2 text-[16px]">
-              <input
-                type="checkbox"
-                class="mt-1"
-                name="reason_affiliation"
-              />
-              <span>
-                <span class="font-bold">Affiliation</span>
-                <span class="font-normal">
-                  — I'm a member of the publication's editorial board and
-                  strongly support the publication. I will regularly recommend
-                  articles to colleagues and students.</span
-                >
-              </span>
-            </label>
-          </div>
-        </div>
-        <hr class="my-6 border-gray-300" />
-        <div class="text-[15px] mb-2">
-          <span class="font-semibold">Privacy statement:</span>
-          Information entered on this form may be recorded by the publisher, but
-          will not be used to send unsolicited e-mails or shared with any third
-          party.
-        </div>
-        <div class="text-[15px] mb-2">
-          <span class="italic">*</span> Marks a required field
-        </div>
-        <!-- BUTTONLAR O'NGDA -->
-        <div class="form-actions-right">
-          <button
-            type="submit"
-            class="bg-[#00325f] text-white px-6 py-2 rounded font-semibold text-[16px] hover:bg-[#002244] transition"
-          >
-            Submit
-          </button>
-          <button
-            type="reset"
-            class="bg-[#00325f] text-white px-6 py-2 rounded font-semibold text-[16px] hover:bg-[#002244] transition"
-          >
-            Clear
-          </button>
-        </div>
-      </div>
-    </form>
-    <p class="mt-6 text-[15px]">
-      If you don't know your librarian's email address, please add the following
-      address to the Email field above and we will forward the recommendation on
-      for you:<br />
-      <span class="font-semibold text-[#00325f]"
-        >JournalRecommendation@eup.ed.ac.uk</span
-      >.
-    </p>
-  </main>
+      </form>
+      <p class="mt-6 text-[15px]">
+        If you don't know your librarian's email address, please add the
+        following address to the Email field above and we will forward the
+        recommendation on for you:<br />
+        <span class="font-semibold text-[#00325f]"
+          >JournalRecommendation@eup.ed.ac.uk</span
+        >.
+      </p>
+    </section>
+  </div>
 </div>
 {% endblock %}

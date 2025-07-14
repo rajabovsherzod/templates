@@ -46,6 +46,18 @@
           padding-right: 7rem !important;
         }
       }
+      @media (min-width: 1280px) {
+        .xl\:px-custom {
+          padding-left: 7rem !important;
+          padding-right: 7rem !important;
+        }
+      }
+      @media (min-width: 1536px) {
+        .\32xl\:px-custom {
+          padding-left: 15rem !important;
+          padding-right: 15rem !important;
+        }
+      }
 
       /* Smooth and slower accordion animation */
       [data-accordion-content] {
@@ -102,7 +114,7 @@
       <div class="h-[144px] bg-[#385468]">
         <div class="h-[120px] flex items-center">
           <div
-            class="container mx-auto flex justify-between items-center px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+            class="container mx-auto flex justify-between items-center px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom xl:px-custom 2xl:px-custom"
           >
             <h1 class="text-white text-xl sm:text-2xl lg:text-[28px] font-bold">
               Comparative Critical Studies
@@ -111,7 +123,9 @@
         </div>
       </div>
     </header>
-    <div class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom">
+    <div
+      class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom xl:px-custom 2xl:px-custom"
+    >
       <nav
         x-data="{ open: false, submitOpen: false, aboutOpen: false }"
         class="-mt-[34px] relative z-10 bg-[#00325f]"
@@ -350,7 +364,7 @@
     </div>
     <main class="py-8">
       <div
-        class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+        class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom xl:px-custom 2xl:px-custom"
       >
         {% block content %}{% endblock %}
       </div>
@@ -358,7 +372,7 @@
 
     <footer class="bg-[#757374] text-gray-200 py-12 mt-12">
       <div
-        class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+        class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom xl:px-custom 2xl:px-custom"
       >
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div>
