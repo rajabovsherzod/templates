@@ -1,6 +1,5 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}All Issues{% endblock %}
+{% extends 'base.html' %} {% load static %} 
+{% block title %}All Issues{%endblock %} 
 {% block content %}
 <div class="grid grid-cols-12 gap-8 px-4 md:px-8">
   <!-- Left: Decade tabs and years row -->
@@ -10,185 +9,239 @@
     <div class="border-b border-gray-200 mb-0"></div>
     <!-- Decade tabs -->
     <div class="flex items-center h-[58px] mb-0 relative">
-      <ul class="flex flex-1 justify-center items-center h-full" id="decadeTabs">
+      <ul
+        class="flex flex-1 justify-center items-center h-full"
+        id="decadeTabs"
+      >
         <li>
-          <button class="tab-decade px-8 h-full flex items-center text-lg font-medium text-gray-500 bg-transparent relative" data-decade="2020s">2020s</button>
+          <button
+            class="tab-decade px-8 h-full flex items-center text-lg font-medium text-gray-500 bg-transparent relative"
+            data-decade="2020s"
+          >
+            2020s
+          </button>
         </li>
         <li>
-          <button class="tab-decade px-8 h-full flex items-center text-lg font-medium text-gray-500 bg-transparent relative" data-decade="2010s">2010s</button>
+          <button
+            class="tab-decade px-8 h-full flex items-center text-lg font-medium text-gray-500 bg-transparent relative"
+            data-decade="2010s"
+          >
+            2010s
+          </button>
         </li>
         <li>
-          <button class="tab-decade px-8 h-full flex items-center text-lg font-medium text-gray-500 bg-transparent relative" data-decade="2000s">2000s</button>
+          <button
+            class="tab-decade px-8 h-full flex items-center text-lg font-medium text-gray-500 bg-transparent relative"
+            data-decade="2000s"
+          >
+            2000s
+          </button>
         </li>
       </ul>
       <!-- Decade active underline -->
-      <div id="decadeActiveLine" class="absolute left-0 right-0 bottom-0 h-[6px] pointer-events-none z-10" style="transition: all 0.2s;"></div>
+      <div
+        id="decadeActiveLine"
+        class="absolute left-0 right-0 bottom-0 h-[6px] pointer-events-none z-10"
+        style="transition: all 0.2s"
+      ></div>
     </div>
     <!-- Years row -->
-    <div class="w-full bg-[#f0f0f0] flex items-center h-[58px] relative select-none rounded">
-      <button id="yearsLeft" class="text-[#757374] text-2xl font-bold px-4 h-full flex items-center justify-center bg-transparent outline-none" aria-label="Scroll left">&lt;</button>
-      <div class="flex-1 h-full flex items-center overflow-x-auto scrollbar-hide" id="yearsRowContainer">
-        <div id="yearsRow" class="flex items-center h-full space-x-8 px-2"></div>
+    <div
+      class="w-full bg-[#f0f0f0] flex items-center h-[58px] relative select-none rounded"
+    >
+      <button
+        id="yearsLeft"
+        class="text-[#757374] text-2xl font-bold px-4 h-full flex items-center justify-center bg-transparent outline-none"
+        aria-label="Scroll left"
+      >
+        &lt;
+      </button>
+      <div
+        class="flex-1 h-full flex items-center overflow-x-auto scrollbar-hide"
+        id="yearsRowContainer"
+      >
+        <div
+          id="yearsRow"
+          class="flex items-center h-full space-x-8 px-2"
+        ></div>
       </div>
-      <button id="yearsRight" class="text-[#757374] text-2xl font-bold px-4 h-full flex items-center justify-center bg-transparent outline-none" aria-label="Scroll right">&gt;</button>
+      <button
+        id="yearsRight"
+        class="text-[#757374] text-2xl font-bold px-4 h-full flex items-center justify-center bg-transparent outline-none"
+        aria-label="Scroll right"
+      >
+        &gt;
+      </button>
     </div>
     <div id="issuesList" class="space-y-6 mt-8"></div>
   </div>
   <!-- Right: sidebar -->
   <aside class="col-span-12 md:col-span-4 space-y-6">
-    {% include "components/sidebar_alerts.html" %}
+    {% include "components/sidebar_alerts.html" %} 
     {% include "components/sidebar_mailing_list.html" %}
   </aside>
 </div>
 <style>
-.tab-decade {
-  background: transparent;
-  position: relative;
-  height: 100%;
-  transition: color 0.2s;
-  color: #757374;
-  font-weight: 500;
-  outline: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tab-decade.active {
-  color: #c51152 !important;
-  font-weight: bold;
-}
-#yearsRow button {
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  position: relative;
-  color: #757374;
-  transition: color 0.2s;
-  height: 100%;
-  min-width: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5rem 0 0.5rem;
-}
-#yearsRow button.active {
-  color: #c51152;
-  font-weight: bold;
-}
-#yearsRow button.active::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 5px;
-  background: #c51152;
-  border-radius: 2px;
-}
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .tab-decade {
+    background: transparent;
+    position: relative;
+    height: 100%;
+    transition: color 0.2s;
+    color: #757374;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tab-decade.active {
+    color: #c51152 !important;
+    font-weight: bold;
+  }
+  #yearsRow button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    position: relative;
+    color: #757374;
+    transition: color 0.2s;
+    height: 100%;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  #yearsRow button.active {
+    color: #c51152;
+    font-weight: bold;
+  }
+  #yearsRow button.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: #c51152;
+    border-radius: 2px;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 </style>
 <script>
-const decades = {
-  "2020s": [2025, 2024, 2023, 2022, 2021, 2020],
-  "2010s": [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010],
-  "2000s": [2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000],
-};
-const issues = {
-  2025: [
-    { volume: 22, issue: "2", date: "June 2025", title: "Current Issue" },
-  ],
-  2019: [
-    {
-      volume: 16,
-      issue: "2-3",
-      date: "October 2019",
-      title: "Translation meets Book History: Intersections: 1700-1950",
-    },
-    { volume: 16, issue: "1", date: "February 2019", title: "" },
-  ],
-  // ... add more years as needed
-};
-let selectedDecade = "2020s";
-let selectedYear = 2025;
-function renderYears() {
-  const yearsRow = document.getElementById("yearsRow");
-  yearsRow.innerHTML = "";
-  decades[selectedDecade].forEach((year) => {
-    const btn = document.createElement("button");
-    btn.textContent = year;
-    btn.className = (year === selectedYear ? "active " : "") + "font-medium relative";
-    btn.onclick = () => {
-      selectedYear = year;
+  const decades = {
+    "2020s": [2025, 2024, 2023, 2022, 2021, 2020],
+    "2010s": [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010],
+    "2000s": [2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000],
+  };
+  const issues = {
+    2025: [
+      { volume: 22, issue: "2", date: "June 2025", title: "Current Issue" },
+    ],
+    2019: [
+      {
+        volume: 16,
+        issue: "2-3",
+        date: "October 2019",
+        title: "Translation meets Book History: Intersections: 1700-1950",
+      },
+      { volume: 16, issue: "1", date: "February 2019", title: "" },
+    ],
+    // ... add more years as needed
+  };
+  let selectedDecade = "2020s";
+  let selectedYear = 2025;
+  function renderYears() {
+    const yearsRow = document.getElementById("yearsRow");
+    yearsRow.innerHTML = "";
+    decades[selectedDecade].forEach((year) => {
+      const btn = document.createElement("button");
+      btn.textContent = year;
+      btn.className =
+        (year === selectedYear ? "active " : "") + "font-medium relative";
+      btn.onclick = () => {
+        selectedYear = year;
+        renderYears();
+        renderIssues();
+      };
+      yearsRow.appendChild(btn);
+    });
+  }
+  function renderIssues() {
+    const issuesList = document.getElementById("issuesList");
+    issuesList.innerHTML = "";
+    (issues[selectedYear] || []).forEach((issue, idx, arr) => {
+      const div = document.createElement("div");
+      div.className = ""; // padding yo‘q
+      div.innerHTML =
+        `<div class="text-base font-medium text-gray-800">Volume ${issue.volume} | Issue ${issue.issue} | ${issue.date}</div>` +
+        (issue.title
+          ? `<div class="text-gray-600 font-medium">${issue.title}</div>`
+          : "");
+      issuesList.appendChild(div);
+      // Agar oxirgi emas bo‘lsa, chiziq qo‘shamiz
+      if (idx < arr.length - 1) {
+        const hr = document.createElement("hr");
+        hr.className = "border-gray-200 my-0"; // Juda kichik yoki nol margin
+        issuesList.appendChild(hr);
+      }
+    });
+  }
+  function updateDecadeActiveLine() {
+    const activeBtn = document.querySelector(".tab-decade.active");
+    const line = document.getElementById("decadeActiveLine");
+    if (activeBtn && line) {
+      const rect = activeBtn.getBoundingClientRect();
+      const parentRect =
+        activeBtn.parentElement.parentElement.getBoundingClientRect();
+      line.style.left = rect.left - parentRect.left + "px";
+      line.style.width = rect.width + "px";
+      line.style.background = "#c51152";
+      line.style.borderRadius = "0 0 3px 3px";
+      line.style.height = "6px";
+    }
+  }
+  document.querySelectorAll(".tab-decade").forEach((btn) => {
+    btn.onclick = function () {
+      selectedDecade = this.dataset.decade;
+      selectedYear = decades[selectedDecade][0];
+      document
+        .querySelectorAll(".tab-decade")
+        .forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
       renderYears();
       renderIssues();
+      document.getElementById("yearsRowContainer").scrollLeft = 0;
+      updateDecadeActiveLine();
     };
-    yearsRow.appendChild(btn);
   });
-}
-function renderIssues() {
-  const issuesList = document.getElementById("issuesList");
-  issuesList.innerHTML = "";
-  (issues[selectedYear] || []).forEach((issue, idx, arr) => {
-    const div = document.createElement("div");
-    div.className = ""; // padding yo‘q
-    div.innerHTML =
-      `<div class="text-base font-medium text-gray-800">Volume ${issue.volume} | Issue ${issue.issue} | ${issue.date}</div>` +
-      (issue.title
-        ? `<div class="text-gray-600 font-medium">${issue.title}</div>`
-        : "");
-    issuesList.appendChild(div);
-    // Agar oxirgi emas bo‘lsa, chiziq qo‘shamiz
-    if (idx < arr.length - 1) {
-      const hr = document.createElement("hr");
-      hr.className = "border-gray-200 my-0"; // Juda kichik yoki nol margin
-      issuesList.appendChild(hr);
-    }
-  });
-}
-function updateDecadeActiveLine() {
-  const activeBtn = document.querySelector('.tab-decade.active');
-  const line = document.getElementById('decadeActiveLine');
-  if (activeBtn && line) {
-    const rect = activeBtn.getBoundingClientRect();
-    const parentRect = activeBtn.parentElement.parentElement.getBoundingClientRect();
-    line.style.left = (rect.left - parentRect.left) + "px";
-    line.style.width = rect.width + "px";
-    line.style.background = "#c51152";
-    line.style.borderRadius = "0 0 3px 3px";
-    line.style.height = "6px";
-  }
-}
-document.querySelectorAll(".tab-decade").forEach((btn) => {
-  btn.onclick = function () {
-    selectedDecade = this.dataset.decade;
-    selectedYear = decades[selectedDecade][0];
+  document.getElementById("yearsLeft").onclick = function () {
     document
-      .querySelectorAll(".tab-decade")
-      .forEach((b) => b.classList.remove("active"));
-    this.classList.add("active");
+      .getElementById("yearsRowContainer")
+      .scrollBy({ left: -120, behavior: "smooth" });
+  };
+  document.getElementById("yearsRight").onclick = function () {
+    document
+      .getElementById("yearsRowContainer")
+      .scrollBy({ left: 120, behavior: "smooth" });
+  };
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .querySelector('.tab-decade[data-decade="2020s"]')
+      .classList.add("active");
     renderYears();
     renderIssues();
-    document.getElementById('yearsRowContainer').scrollLeft = 0;
     updateDecadeActiveLine();
-  };
-});
-document.getElementById("yearsLeft").onclick = function() {
-  document.getElementById('yearsRowContainer').scrollBy({ left: -120, behavior: "smooth" });
-};
-document.getElementById("yearsRight").onclick = function() {
-  document.getElementById('yearsRowContainer').scrollBy({ left: 120, behavior: "smooth" });
-};
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector('.tab-decade[data-decade="2020s"]').classList.add("active");
-  renderYears();
-  renderIssues();
-  updateDecadeActiveLine();
-  window.addEventListener('resize', updateDecadeActiveLine);
-});
+    window.addEventListener("resize", updateDecadeActiveLine);
+  });
 </script>
-{% endblock %}
-{% block nav_all_issues_active %}active{% endblock %}
+{% endblock %} {% block nav_all_issues_active %}active{% endblock %}

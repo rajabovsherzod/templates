@@ -77,6 +77,23 @@
       .mobile-nav-toggle {
         background-color: #00325f !important;
       }
+      /* Sticky footer only */
+      html,
+      body {
+        height: 100%;
+        min-height: 100vh;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1 0 auto;
+      }
+      footer {
+        margin-top: auto;
+      }
     </style>
   </head>
   <body class="bg-[#fafafa]">
@@ -94,13 +111,11 @@
         </div>
       </div>
     </header>
-
-    <!-- Main Body Container (for nav and content) -->
     <div class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom">
-      <!-- Overlapping Navigation -->
       <nav
         x-data="{ open: false, submitOpen: false, aboutOpen: false }"
-        class="-mt-[34px] rounded-sm shadow-md relative z-10"
+        class="-mt-[34px] relative z-10 bg-[#00325f]"
+        style="margin-top: -34px"
       >
         <!-- Mobile nav toggle button -->
         <button
@@ -123,7 +138,6 @@
             ></path>
           </svg>
         </button>
-
         <!-- Desktop Menu -->
         <ul
           class="hidden lg:flex justify-center items-center text-white text-sm font-bold bg-[#00325f]"
@@ -231,7 +245,6 @@
             >
           </li>
         </ul>
-
         <!-- Mobile nav menu -->
         <div
           x-show="open"
@@ -334,9 +347,14 @@
           </ul>
         </div>
       </nav>
-
-      <main class="py-8">{% block content %}{% endblock %}</main>
     </div>
+    <main class="py-8">
+      <div
+        class="container mx-auto px-2 sm:px-8 md:px-16 lg:px-28 lg:px-custom"
+      >
+        {% block content %}{% endblock %}
+      </div>
+    </main>
 
     <footer class="bg-[#757374] text-gray-200 py-12 mt-12">
       <div
